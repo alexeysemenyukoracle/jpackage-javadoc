@@ -1,0 +1,8 @@
+module:jdk.jpackage
+jdk.jpackage.internal
+jdk.jpackage.internal.model
+jdk.jpackage.internal.pipeline
+jdk.jpackage.internal.resources
+jdk.jpackage.internal.util
+jdk.jpackage.internal.util.function
+jdk.jpackage.main
