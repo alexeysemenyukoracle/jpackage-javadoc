@@ -66,7 +66,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#isConsole()" tabindex="0">isConsole()</a></li>
-<li><a href="#shortcuts()" tabindex="0">shortcuts()</a></li>
+<li><a href="#startMenuShortcut()" tabindex="0">startMenuShortcut()</a></li>
+<li><a href="#desktopShortcut()" tabindex="0">desktopShortcut()</a></li>
 </ol>
 </li>
 </ol>
@@ -104,9 +105,6 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
 <div class="col-second even-row-color"><code><a href="WinLauncherMixin.Stub.html" class="type-name-link" title="class in jdk.jpackage.internal.model">WinLauncherMixin.Stub</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>static enum&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="WinLauncherMixin.WinShortcut.html" class="type-name-link" title="enum class in jdk.jpackage.internal.model">WinLauncherMixin.WinShortcut</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -121,12 +119,19 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isConsole()" class="member-name-link">isConsole</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="WinLauncherMixin.WinShortcut.html" title="enum class in jdk.jpackage.internal.model">WinLauncherMixin.WinShortcut</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#shortcuts()" class="member-name-link">shortcuts</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;<a href="LauncherShortcut.html" title="class in jdk.jpackage.internal.model">LauncherShortcut</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#desktopShortcut()" class="member-name-link">desktopShortcut</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Gets the desktop shortcut of this application launcher.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isConsole()" class="member-name-link">isConsole</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;<a href="LauncherShortcut.html" title="class in jdk.jpackage.internal.model">LauncherShortcut</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#startMenuShortcut()" class="member-name-link">startMenuShortcut</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Gets the start menu shortcut of this application launcher.</div>
+</div>
 </div>
 </div>
 </div>
@@ -150,10 +155,38 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="shortcuts()">
-<h3>shortcuts</h3>
+<section class="detail" id="startMenuShortcut()">
+<h3>startMenuShortcut</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="WinLauncherMixin.WinShortcut.html" title="enum class in jdk.jpackage.internal.model">WinLauncherMixin.WinShortcut</a>&gt;</span>&nbsp;<span class="element-name">shortcuts</span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="LauncherShortcut.html" title="class in jdk.jpackage.internal.model">LauncherShortcut</a>&gt;</span>&nbsp;<span class="element-name">startMenuShortcut</span>()</div>
+<div class="block">Gets the start menu shortcut of this application launcher.
+ <p>
+ Returns a non-empty <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link"><code>Optional</code></a> instance if a request about the start
+ menu shortcut for this application launcher was made and an empty
+ <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link"><code>Optional</code></a> instance if there was no request about the start menu
+ shortcut for this application launcher.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the start menu shortcut of this application launcher</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="desktopShortcut()">
+<h3>desktopShortcut</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="LauncherShortcut.html" title="class in jdk.jpackage.internal.model">LauncherShortcut</a>&gt;</span>&nbsp;<span class="element-name">desktopShortcut</span>()</div>
+<div class="block">Gets the desktop shortcut of this application launcher.
+ <p>
+ Returns a non-empty <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link"><code>Optional</code></a> instance if a request about the desktop
+ shortcut for this application launcher was made and an empty <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link"><code>Optional</code></a>
+ instance if there was no request about the desktop shortcut for this
+ application launcher.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the start menu shortcut of this application launcher</dd>
+</dl>
 </div>
 </section>
 </li>

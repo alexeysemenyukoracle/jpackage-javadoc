@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <main role="main">
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<h1 title="Interface ThrowingSupplier" class="title">Interface ThrowingSupplier&lt;T&gt;</h1>
+<h1 title="Interface ThrowingSupplier" class="title">Interface ThrowingSupplier&lt;T,<wbr>E extends <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a>&gt;</h1>
 </div>
 <section class="class-description" id="class-description">
 <div class="horizontal-scroll">
@@ -83,7 +83,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/FunctionalInterface.html" title="class or interface in java.lang" class="external-link">@FunctionalInterface</a>
-</span><span class="modifiers">public interface </span><span class="element-name type-name-label">ThrowingSupplier&lt;T&gt;</span></div>
+</span><span class="modifiers">public interface </span><span class="element-name type-name-label">ThrowingSupplier&lt;T,<wbr>E extends <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a>&gt;</span></div>
 </div>
 </section>
 <section class="summary">
@@ -103,7 +103,7 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#get()" class="member-name-link">get</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static &lt;T&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#toSupplier(jdk.jpackage.internal.util.function.ThrowingSupplier)" class="member-name-link">toSupplier</a><wbr>(<a href="ThrowingSupplier.html" title="interface in jdk.jpackage.internal.util.function">ThrowingSupplier</a>&lt;T&gt;&nbsp;v)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#toSupplier(jdk.jpackage.internal.util.function.ThrowingSupplier)" class="member-name-link">toSupplier</a><wbr>(<a href="ThrowingSupplier.html" title="interface in jdk.jpackage.internal.util.function">ThrowingSupplier</a>&lt;T,<wbr>? extends <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a>&gt;&nbsp;v)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
 </div>
 </div>
@@ -124,10 +124,10 @@ loadScripts(document, 'script');</script>
 <h3>get</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="return-type"><a href="ThrowingSupplier.html" title="type parameter in ThrowingSupplier">T</a></span>&nbsp;<span class="element-name">get</span>()
-throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a></span></div>
+throws <span class="exceptions">E</span></div>
 <dl class="notes">
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a></code></dd>
+<dd><code>E</code></dd>
 </dl>
 </div>
 </section>
@@ -136,7 +136,7 @@ throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/
 <section class="detail" id="toSupplier(jdk.jpackage.internal.util.function.ThrowingSupplier)">
 <h3>toSupplier</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;T&gt;</span>&nbsp;<span class="element-name">toSupplier</span><wbr><span class="parameters">(<a href="ThrowingSupplier.html" title="interface in jdk.jpackage.internal.util.function">ThrowingSupplier</a>&lt;T&gt;&nbsp;v)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;T&gt;</span>&nbsp;<span class="element-name">toSupplier</span><wbr><span class="parameters">(<a href="ThrowingSupplier.html" title="interface in jdk.jpackage.internal.util.function">ThrowingSupplier</a>&lt;T,<wbr>? extends <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a>&gt;&nbsp;v)</span></div>
 </div>
 </section>
 </li>

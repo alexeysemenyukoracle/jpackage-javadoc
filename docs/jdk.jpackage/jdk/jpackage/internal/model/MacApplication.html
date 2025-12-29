@@ -83,7 +83,7 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code><a href="Application.html" title="interface in jdk.jpackage.internal.model">Application</a></code>, <code><a href="MacApplicationMixin.html" title="interface in jdk.jpackage.internal.model">MacApplicationMixin</a></code></dd>
+<dd><code><a href="Application.html" title="interface in jdk.jpackage.internal.model">Application</a></code>, <code><a href="BundleSpec.html" title="interface in jdk.jpackage.internal.model">BundleSpec</a></code>, <code><a href="MacApplicationMixin.html" title="interface in jdk.jpackage.internal.model">MacApplicationMixin</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">MacApplication</span><span class="extends-implements">
@@ -137,7 +137,7 @@ extends <a href="Application.html" title="interface in jdk.jpackage.internal.mod
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#extraAppImageFileData()" class="member-name-link">extraAppImageFileData</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">Gets the additional properties of this application for the application entry
- in the app image (".jpackage") file.</div>
+ in the app image (".jpackage.xml") file.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="DottedVersion.html" title="class in jdk.jpackage.internal.model">DottedVersion</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#shortVersion()" class="member-name-link">shortVersion</a>()</code></div>
@@ -214,13 +214,13 @@ extends <a href="Application.html" title="interface in jdk.jpackage.internal.mod
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">extraAppImageFileData</span>()</div>
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="Application.html#extraAppImageFileData()">Application</a></code></span></div>
 <div class="block">Gets the additional properties of this application for the application entry
- in the app image (".jpackage") file.</div>
+ in the app image (".jpackage.xml") file.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Application.html#extraAppImageFileData()">extraAppImageFileData</a></code>&nbsp;in interface&nbsp;<code><a href="Application.html" title="interface in jdk.jpackage.internal.model">Application</a></code></dd>
 <dt>Returns:</dt>
 <dd>the additional properties of this application for the application
-         entry in ".jpackage" file</dd>
+         entry in ".jpackage.xml" file</dd>
 </dl>
 </div>
 </section>

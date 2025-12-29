@@ -66,7 +66,6 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#app()" tabindex="0">app()</a></li>
-<li><a href="#packageLayout()" tabindex="0">packageLayout()</a></li>
 <li><a href="#packageFileName()" tabindex="0">packageFileName()</a></li>
 <li><a href="#versionWithRelease()" tabindex="0">versionWithRelease()</a></li>
 <li><a href="#isInstallDirInUsrTree()" tabindex="0">isInstallDirInUsrTree()</a></li>
@@ -84,7 +83,7 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code><a href="LinuxPackageMixin.html" title="interface in jdk.jpackage.internal.model">LinuxPackageMixin</a></code>, <code><a href="Package.html" title="interface in jdk.jpackage.internal.model">Package</a></code></dd>
+<dd><code><a href="BundleSpec.html" title="interface in jdk.jpackage.internal.model">BundleSpec</a></code>, <code><a href="LinuxPackageMixin.html" title="interface in jdk.jpackage.internal.model">LinuxPackageMixin</a></code>, <code><a href="Package.html" title="interface in jdk.jpackage.internal.model">Package</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
@@ -145,15 +144,9 @@ extends <a href="Package.html" title="interface in jdk.jpackage.internal.model">
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">Get the name without an extension of the package file of this package.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="AppImageLayout.html" title="interface in jdk.jpackage.internal.model">AppImageLayout</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#packageLayout()" class="member-name-link">packageLayout</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Gets the layout of the installed app image of the application resolved at the
- relative installation directory of this package.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#versionWithRelease()" class="member-name-link">versionWithRelease</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#versionWithRelease()" class="member-name-link">versionWithRelease</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">Gets the version with the release component of this Linux package.</div>
 </div>
 </div>
@@ -164,7 +157,7 @@ extends <a href="Package.html" title="interface in jdk.jpackage.internal.model">
 <code><a href="LinuxPackageMixin.html#additionalDependencies()">additionalDependencies</a>, <a href="LinuxPackageMixin.html#arch()">arch</a>, <a href="LinuxPackageMixin.html#category()">category</a>, <a href="LinuxPackageMixin.html#menuGroupName()">menuGroupName</a>, <a href="LinuxPackageMixin.html#release()">release</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-jdk.jpackage.internal.model.Package">Methods inherited from interface&nbsp;jdk.jpackage.internal.model.<a href="Package.html" title="interface in jdk.jpackage.internal.model">Package</a></h3>
-<code><a href="Package.html#aboutURL()">aboutURL</a>, <a href="Package.html#appImageLayout()">appImageLayout</a>, <a href="Package.html#asApplicationLayout()">asApplicationLayout</a>, <a href="Package.html#asInstalledPackageApplicationLayout()">asInstalledPackageApplicationLayout</a>, <a href="Package.html#asPackageApplicationLayout()">asPackageApplicationLayout</a>, <a href="Package.html#asStandardPackageType()">asStandardPackageType</a>, <a href="Package.html#description()">description</a>, <a href="Package.html#installedPackageLayout()">installedPackageLayout</a>, <a href="Package.html#isRuntimeInstaller()">isRuntimeInstaller</a>, <a href="Package.html#licenseFile()">licenseFile</a>, <a href="Package.html#packageFileNameWithSuffix()">packageFileNameWithSuffix</a>, <a href="Package.html#packageFileSuffix()">packageFileSuffix</a>, <a href="Package.html#packageName()">packageName</a>, <a href="Package.html#predefinedAppImage()">predefinedAppImage</a>, <a href="Package.html#relativeInstallDir()">relativeInstallDir</a>, <a href="Package.html#type()">type</a>, <a href="Package.html#version()">version</a></code></div>
+<code><a href="Package.html#aboutURL()">aboutURL</a>, <a href="Package.html#appImageLayout()">appImageLayout</a>, <a href="Package.html#asApplicationLayout()">asApplicationLayout</a>, <a href="Package.html#asInstalledPackageApplicationLayout()">asInstalledPackageApplicationLayout</a>, <a href="Package.html#asStandardPackageType()">asStandardPackageType</a>, <a href="Package.html#description()">description</a>, <a href="Package.html#installedPackageLayout()">installedPackageLayout</a>, <a href="Package.html#isRuntimeInstaller()">isRuntimeInstaller</a>, <a href="Package.html#licenseFile()">licenseFile</a>, <a href="Package.html#packageFileNameWithSuffix()">packageFileNameWithSuffix</a>, <a href="Package.html#packageFileSuffix()">packageFileSuffix</a>, <a href="Package.html#packageName()">packageName</a>, <a href="Package.html#predefinedAppImage()">predefinedAppImage</a>, <a href="Package.html#relativeInstallDir()">relativeInstallDir</a>, <a href="Package.html#type()">type</a>, <a href="Package.html#version()">version</a></code></div>
 </section>
 </li>
 </ul>
@@ -188,34 +181,6 @@ extends <a href="Package.html" title="interface in jdk.jpackage.internal.model">
 <dd><code><a href="Package.html#app()">app</a></code>&nbsp;in interface&nbsp;<code><a href="Package.html" title="interface in jdk.jpackage.internal.model">Package</a></code></dd>
 <dt>Returns:</dt>
 <dd>the application of this package</dd>
-</dl>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="packageLayout()">
-<h3>packageLayout</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="AppImageLayout.html" title="interface in jdk.jpackage.internal.model">AppImageLayout</a></span>&nbsp;<span class="element-name">packageLayout</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="Package.html#packageLayout()">Package</a></code></span></div>
-<div class="block">Gets the layout of the installed app image of the application resolved at the
- relative installation directory of this package.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="LinuxPackageMixin.html#packageLayout()">packageLayout</a></code>&nbsp;in interface&nbsp;<code><a href="LinuxPackageMixin.html" title="interface in jdk.jpackage.internal.model">LinuxPackageMixin</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="Package.html#packageLayout()">packageLayout</a></code>&nbsp;in interface&nbsp;<code><a href="Package.html" title="interface in jdk.jpackage.internal.model">Package</a></code></dd>
-<dt>Returns:</dt>
-<dd>the layout of the installed app image of the application resolved at
-         the relative installation directory of this package</dd>
-<dt>See Also:</dt>
-<dd>
-<ul class="tag-list-long">
-<li><a href="Package.html#relativeInstallDir()"><code>Package.relativeInstallDir()</code></a></li>
-<li><a href="Package.html#appImageLayout()"><code>Package.appImageLayout()</code></a></li>
-<li><a href="Package.html#installedPackageLayout()"><code>Package.installedPackageLayout()</code></a></li>
-</ul>
-</dd>
 </dl>
 </div>
 </section>

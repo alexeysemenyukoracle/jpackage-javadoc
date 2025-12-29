@@ -1,5 +1,6 @@
 module:jdk.jpackage
 jdk.jpackage.internal
+jdk.jpackage.internal.cli
 jdk.jpackage.internal.model
 jdk.jpackage.internal.pipeline
 jdk.jpackage.internal.resources

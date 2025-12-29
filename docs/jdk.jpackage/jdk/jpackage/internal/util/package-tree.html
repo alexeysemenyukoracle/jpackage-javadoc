@@ -66,10 +66,19 @@ loadScripts(document, 'script');</script>
 <li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Object.html" class="type-name-link external-link" title="class or interface in java.lang">Object</a>
 <ul>
 <li class="circle">jdk.jpackage.internal.util.<a href="CollectionUtils.html" class="type-name-link" title="class in jdk.jpackage.internal.util">CollectionUtils</a></li>
+<li class="circle">jdk.jpackage.internal.util.<a href="CommandLineFormat.html" class="type-name-link" title="class in jdk.jpackage.internal.util">CommandLineFormat</a></li>
+<li class="circle">jdk.jpackage.internal.util.<a href="CommandOutputControl.html" class="type-name-link" title="class in jdk.jpackage.internal.util">CommandOutputControl</a></li>
 <li class="circle">jdk.jpackage.internal.util.<a href="CompositeProxy.html" class="type-name-link" title="class in jdk.jpackage.internal.util">CompositeProxy</a></li>
 <li class="circle">jdk.jpackage.internal.util.<a href="CompositeProxy.Builder.html" class="type-name-link" title="class in jdk.jpackage.internal.util">CompositeProxy.Builder</a></li>
+<li class="circle">jdk.jpackage.internal.util.<a href="Enquoter.html" class="type-name-link" title="class in jdk.jpackage.internal.util">Enquoter</a></li>
 <li class="circle">jdk.jpackage.internal.util.<a href="FileUtils.html" class="type-name-link" title="class in jdk.jpackage.internal.util">FileUtils</a></li>
+<li class="circle">jdk.jpackage.internal.util.<a href="IdentityWrapper.html" class="type-name-link" title="class in jdk.jpackage.internal.util">IdentityWrapper</a>&lt;T&gt;</li>
 <li class="circle">jdk.jpackage.internal.util.<a href="LocalizedExceptionBuilder.html" class="type-name-link" title="class in jdk.jpackage.internal.util">LocalizedExceptionBuilder</a>&lt;T&gt;</li>
+<li class="circle">java.io.<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/io/OutputStream.html" class="type-name-link external-link" title="class or interface in java.io">OutputStream</a> (implements java.io.<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/io/Closeable.html" title="class or interface in java.io" class="external-link">Closeable</a>, java.io.<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/io/Flushable.html" title="class or interface in java.io" class="external-link">Flushable</a>)
+<ul>
+<li class="circle">jdk.jpackage.internal.util.<a href="TeeOutputStream.html" class="type-name-link" title="class in jdk.jpackage.internal.util">TeeOutputStream</a></li>
+</ul>
+</li>
 <li class="circle">jdk.jpackage.internal.util.<a href="PathGroup.html" class="type-name-link" title="class in jdk.jpackage.internal.util">PathGroup</a></li>
 <li class="circle">jdk.jpackage.internal.util.<a href="PathUtils.html" class="type-name-link" title="class in jdk.jpackage.internal.util">PathUtils</a></li>
 <li class="circle">jdk.jpackage.internal.util.<a href="PListReader.html" class="type-name-link" title="class in jdk.jpackage.internal.util">PListReader</a></li>
@@ -83,6 +92,26 @@ loadScripts(document, 'script');</script>
 </li>
 </ul>
 </li>
+<li class="circle">jdk.jpackage.internal.util.<a href="RetryExecutor.html" class="type-name-link" title="class in jdk.jpackage.internal.util">RetryExecutor</a>&lt;T,<wbr>E&gt;</li>
+<li class="circle">jdk.jpackage.internal.util.<a href="SetBuilder.html" class="type-name-link" title="class in jdk.jpackage.internal.util">SetBuilder</a>&lt;T&gt;</li>
+<li class="circle">jdk.jpackage.internal.util.<a href="Slot.html" class="type-name-link" title="class in jdk.jpackage.internal.util">Slot</a>&lt;T&gt;</li>
+<li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Throwable.html" class="type-name-link external-link" title="class or interface in java.lang">Throwable</a> (implements java.io.<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a>)
+<ul>
+<li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Exception.html" class="type-name-link external-link" title="class or interface in java.lang">Exception</a>
+<ul>
+<li class="circle">java.io.<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/io/IOException.html" class="type-name-link external-link" title="class or interface in java.io">IOException</a>
+<ul>
+<li class="circle">jdk.jpackage.internal.util.<a href="CommandOutputControl.UnexpectedResultException.html" class="type-name-link" title="class in jdk.jpackage.internal.util">CommandOutputControl.UnexpectedResultException</a>
+<ul>
+<li class="circle">jdk.jpackage.internal.util.<a href="CommandOutputControl.UnexpectedExitCodeException.html" class="type-name-link" title="class in jdk.jpackage.internal.util">CommandOutputControl.UnexpectedExitCodeException</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="circle">jdk.jpackage.internal.util.<a href="TokenReplace.html" class="type-name-link" title="class in jdk.jpackage.internal.util">TokenReplace</a></li>
 <li class="circle">jdk.jpackage.internal.util.<a href="XmlUtils.html" class="type-name-link" title="class in jdk.jpackage.internal.util">XmlUtils</a></li>
 </ul>
@@ -92,11 +121,46 @@ loadScripts(document, 'script');</script>
 <section class="hierarchy">
 <h2 title="Interface Hierarchy">Interface Hierarchy</h2>
 <ul>
+<li class="circle">jdk.jpackage.internal.util.<a href="CommandOutputControl.Executable.html" class="type-name-link" title="interface in jdk.jpackage.internal.util">CommandOutputControl.Executable</a></li>
+<li class="circle">jdk.jpackage.internal.util.<a href="CommandOutputControl.ExecutableSpec.html" class="type-name-link" title="interface in jdk.jpackage.internal.util">CommandOutputControl.ExecutableSpec</a></li>
 <li class="circle">jdk.jpackage.internal.util.<a href="CompositeProxy.InvokeTunnel.html" class="type-name-link" title="interface in jdk.jpackage.internal.util">CompositeProxy.InvokeTunnel</a></li>
 <li class="circle">jdk.jpackage.internal.util.<a href="PathGroup.TransformHandler.html" class="type-name-link" title="interface in jdk.jpackage.internal.util">PathGroup.TransformHandler</a></li>
+<li class="circle">jdk.jpackage.internal.util.<a href="RetryExecutor.Context.html" class="type-name-link" title="interface in jdk.jpackage.internal.util">RetryExecutor.Context</a>&lt;T&gt;</li>
 <li class="circle">jdk.jpackage.internal.util.<a href="StringBundle.html" class="type-name-link" title="interface in jdk.jpackage.internal.util">StringBundle</a></li>
 <li class="circle">jdk.jpackage.internal.util.<a href="XmlConsumer.html" class="type-name-link" title="interface in jdk.jpackage.internal.util">XmlConsumer</a></li>
 <li class="circle">jdk.jpackage.internal.util.<a href="XmlUtils.XmlConsumerNoArg.html" class="type-name-link" title="interface in jdk.jpackage.internal.util">XmlUtils.XmlConsumerNoArg</a></li>
+</ul>
+</section>
+<section class="hierarchy">
+<h2 title="Enum Class Hierarchy">Enum Class Hierarchy</h2>
+<ul>
+<li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Object.html" class="type-name-link external-link" title="class or interface in java.lang">Object</a>
+<ul>
+<li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Enum.html" class="type-name-link external-link" title="class or interface in java.lang">Enum</a>&lt;E&gt; (implements java.lang.<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;T&gt;, java.lang.constant.<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/constant/Constable.html" title="class or interface in java.lang.constant" class="external-link">Constable</a>, java.io.<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a>)
+<ul>
+<li class="circle">jdk.jpackage.internal.util.<a href="PListReader.Raw.Type.html" class="type-name-link" title="enum class in jdk.jpackage.internal.util">PListReader.Raw.Type</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section class="hierarchy">
+<h2 title="Record Class Hierarchy">Record Class Hierarchy</h2>
+<ul>
+<li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Object.html" class="type-name-link external-link" title="class or interface in java.lang">Object</a>
+<ul>
+<li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Record.html" class="type-name-link external-link" title="class or interface in java.lang">Record</a>
+<ul>
+<li class="circle">jdk.jpackage.internal.util.<a href="CommandOutputControl.ProcessSpec.html" class="type-name-link" title="class in jdk.jpackage.internal.util">CommandOutputControl.ProcessSpec</a> (implements jdk.jpackage.internal.util.<a href="CommandOutputControl.ExecutableSpec.html" title="interface in jdk.jpackage.internal.util">CommandOutputControl.ExecutableSpec</a>)</li>
+<li class="circle">jdk.jpackage.internal.util.<a href="CommandOutputControl.Result.html" class="type-name-link" title="class in jdk.jpackage.internal.util">CommandOutputControl.Result</a></li>
+<li class="circle">jdk.jpackage.internal.util.<a href="CommandOutputControl.ToolProviderSpec.html" class="type-name-link" title="class in jdk.jpackage.internal.util">CommandOutputControl.ToolProviderSpec</a> (implements jdk.jpackage.internal.util.<a href="CommandOutputControl.ExecutableSpec.html" title="interface in jdk.jpackage.internal.util">CommandOutputControl.ExecutableSpec</a>)</li>
+<li class="circle">jdk.jpackage.internal.util.<a href="PListReader.Raw.html" class="type-name-link" title="class in jdk.jpackage.internal.util">PListReader.Raw</a></li>
+<li class="circle">jdk.jpackage.internal.util.<a href="Result.html" class="type-name-link" title="class in jdk.jpackage.internal.util">Result</a>&lt;T&gt;</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </section>
 </main>

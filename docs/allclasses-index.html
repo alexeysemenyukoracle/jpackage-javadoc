@@ -102,46 +102,23 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
 <div class="block">Default implementation of <a href="jdk.jpackage/jdk/jpackage/internal/model/ApplicationLayoutMixin.html" title="interface in jdk.jpackage.internal.model"><code>ApplicationLayoutMixin</code></a> interface.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/ApplicationWriter.html" title="interface in jdk.jpackage.internal.model">ApplicationWriter</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
-<div class="block">Creates app image directory from the given <a href="jdk.jpackage/jdk/jpackage/internal/model/Application.html" title="interface in jdk.jpackage.internal.model"><code>Application</code></a> object.</div>
-</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/Arguments.html" title="class in jdk.jpackage.internal">Arguments</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
-<div class="block">Arguments
-
- This class encapsulates and processes the command line arguments,
- in effect, implementing all the work of jpackage tool.</div>
-</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="jdk.jpackage/jdk/jpackage/internal/Arguments.CLIOptions.html" title="enum class in jdk.jpackage.internal">Arguments.CLIOptions</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/BasicBundlers.html" title="class in jdk.jpackage.internal">BasicBundlers</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
-<div class="block">BasicBundlers
-
- A basic bundlers collection that loads the default bundlers.</div>
-</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/pipeline/BinaryMatrix.html" title="class in jdk.jpackage.internal.pipeline">BinaryMatrix</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/BundleParams.html" title="class in jdk.jpackage.internal">BundleParams</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/Bundler.html" title="interface in jdk.jpackage.internal">Bundler</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
-<div class="block">Bundler
-
- The basic interface implemented by all Bundlers.</div>
-</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/Bundlers.html" title="interface in jdk.jpackage.internal">Bundlers</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/BundleSpec.html" title="interface in jdk.jpackage.internal.model">BundleSpec</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
-<div class="block">Bundlers
-
- The interface implemented by BasicBundlers</div>
+<div class="block">A generic bundle specification.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/CLIHelp.html" title="class in jdk.jpackage.internal">CLIHelp</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
-<div class="block">CLIHelp
-
- Generate and show the command line interface help message(s).</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/BundlingEnvironment.html" title="interface in jdk.jpackage.internal.model">BundlingEnvironment</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">Bundling environment.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/model/BundlingOperationDescriptor.html" title="class in jdk.jpackage.internal.model">BundlingOperationDescriptor</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
+<div class="block">Descriptor of a generic bundling operation.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/cli/CliBundlingEnvironment.html" title="interface in jdk.jpackage.internal.cli">CliBundlingEnvironment</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">CLI bundling environment.</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/Codesign.html" title="class in jdk.jpackage.internal">Codesign</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
@@ -153,55 +130,84 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">
 <div class="block">This class consists exclusively of static methods that operate on or return collections.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/util/CompositeProxy.html" title="class in jdk.jpackage.internal.util">CompositeProxy</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/util/CommandLineFormat.html" title="class in jdk.jpackage.internal.util">CommandLineFormat</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Formats command line arguments.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/util/CommandOutputControl.html" title="class in jdk.jpackage.internal.util">CommandOutputControl</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Runs commands and processes their stdout and stderr streams.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/util/CommandOutputControl.Executable.html" title="interface in jdk.jpackage.internal.util">CommandOutputControl.Executable</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/util/CommandOutputControl.ExecutableSpec.html" title="interface in jdk.jpackage.internal.util">CommandOutputControl.ExecutableSpec</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/util/CommandOutputControl.ProcessSpec.html" title="class in jdk.jpackage.internal.util">CommandOutputControl.ProcessSpec</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/util/CommandOutputControl.Result.html" title="class in jdk.jpackage.internal.util">CommandOutputControl.Result</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/util/CommandOutputControl.ToolProviderSpec.html" title="class in jdk.jpackage.internal.util">CommandOutputControl.ToolProviderSpec</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab5"><a href="jdk.jpackage/jdk/jpackage/internal/util/CommandOutputControl.UnexpectedExitCodeException.html" title="class in jdk.jpackage.internal.util">CommandOutputControl.UnexpectedExitCodeException</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab5">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab5"><a href="jdk.jpackage/jdk/jpackage/internal/util/CommandOutputControl.UnexpectedResultException.html" title="class in jdk.jpackage.internal.util">CommandOutputControl.UnexpectedResultException</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab5">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/util/CompositeProxy.html" title="class in jdk.jpackage.internal.util">CompositeProxy</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Dynamic proxy dispatching method calls to multiple objects.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/util/CompositeProxy.Builder.html" title="class in jdk.jpackage.internal.util">CompositeProxy.Builder</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/util/CompositeProxy.Builder.html" title="class in jdk.jpackage.internal.util">CompositeProxy.Builder</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Builder of <a href="jdk.jpackage/jdk/jpackage/internal/util/CompositeProxy.html" title="class in jdk.jpackage.internal.util"><code>CompositeProxy</code></a> instances.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/util/CompositeProxy.InvokeTunnel.html" title="interface in jdk.jpackage.internal.util">CompositeProxy.InvokeTunnel</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/util/CompositeProxy.InvokeTunnel.html" title="interface in jdk.jpackage.internal.util">CompositeProxy.InvokeTunnel</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Invocation tunnel.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab5"><a href="jdk.jpackage/jdk/jpackage/internal/model/ConfigException.html" title="class in jdk.jpackage.internal.model">ConfigException</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab5">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab5"><a href="jdk.jpackage/jdk/jpackage/internal/model/ConfigException.html" title="class in jdk.jpackage.internal.model">ConfigException</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab5">
 <div class="block">Signals that error has occurred at configuration phase.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/model/ConfigException.Builder.html" title="class in jdk.jpackage.internal.model">ConfigException.Builder</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/model/ConfigException.Builder.html" title="class in jdk.jpackage.internal.model">ConfigException.Builder</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Builds <a href="jdk.jpackage/jdk/jpackage/internal/model/ConfigException.html" title="class in jdk.jpackage.internal.model"><code>ConfigException</code></a> instances.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/CustomLauncherIcon.html" title="interface in jdk.jpackage.internal.model">CustomLauncherIcon</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
-<div class="block">Custom application launcher icon.</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/CustomLauncherIcon.html" title="interface in jdk.jpackage.internal.model">CustomLauncherIcon</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="block">Custom application launcher icon sourced from an external file.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/model/CustomLauncherIcon.Stub.html" title="class in jdk.jpackage.internal.model">CustomLauncherIcon.Stub</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/model/CustomLauncherIcon.Stub.html" title="class in jdk.jpackage.internal.model">CustomLauncherIcon.Stub</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab4">
 <div class="block">Default implementation of <a href="jdk.jpackage/jdk/jpackage/internal/model/CustomLauncherIcon.html" title="interface in jdk.jpackage.internal.model"><code>CustomLauncherIcon</code></a> type.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/DefaultLauncherIcon.html" title="interface in jdk.jpackage.internal.model">DefaultLauncherIcon</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/DefaultLauncherIcon.html" title="interface in jdk.jpackage.internal.model">DefaultLauncherIcon</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Default application launcher icon.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/DeployParams.html" title="class in jdk.jpackage.internal">DeployParams</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
-<div class="block">DeployParams
-
- This class is generated and used in Arguments.processArguments() as
- intermediate step in generating the BundleParams and ultimately the Bundles</div>
-</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/pipeline/DirectedEdge.html" title="class in jdk.jpackage.internal.pipeline">DirectedEdge&lt;T&gt;</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/model/DottedVersion.html" title="class in jdk.jpackage.internal.model">DottedVersion</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/model/DefaultLauncherIcon.Details.html" title="class in jdk.jpackage.internal.model">DefaultLauncherIcon.Details</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/pipeline/DirectedEdge.html" title="class in jdk.jpackage.internal.pipeline">DirectedEdge&lt;T&gt;</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/model/DottedVersion.html" title="class in jdk.jpackage.internal.model">DottedVersion</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Dotted numeric version string.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/util/Enquoter.html" title="class in jdk.jpackage.internal.util">Enquoter</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Add quotes to the given string in a configurable way.</div>
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab5"><a href="jdk.jpackage/jdk/jpackage/internal/util/function/ExceptionBox.html" title="class in jdk.jpackage.internal.util.function">ExceptionBox</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab5">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/Executor.html" title="class in jdk.jpackage.internal">Executor</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/ExternalApplication.html" title="interface in jdk.jpackage.internal.model">ExternalApplication</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="block">Description of an external application image.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/model/ExternalApplication.Internal.html" title="class in jdk.jpackage.internal.model">ExternalApplication.Internal</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/ExternalApplication.LauncherInfo.html" title="interface in jdk.jpackage.internal.model">ExternalApplication.LauncherInfo</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="block">Launcher description.</div>
+</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/FileAssociation.html" title="interface in jdk.jpackage.internal.model">FileAssociation</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">File association.</div>
@@ -220,12 +226,17 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/pipeline/FixedDAG.Nodes.html" title="interface in jdk.jpackage.internal.pipeline">FixedDAG.Nodes&lt;U&gt;</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/JPackageToolProvider.html" title="class in jdk.jpackage.internal">JPackageToolProvider</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
-<div class="block">JPackageToolProvider
-
- This is the ToolProvider implementation exported
- to java.util.spi.ToolProvider and ultimately javax.tools.ToolProvider</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/Globals.html" title="class in jdk.jpackage.internal">Globals</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/util/IdentityWrapper.html" title="class in jdk.jpackage.internal.util">IdentityWrapper&lt;T&gt;</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Object wrapper implementing <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link"><code>Object.equals(Object)</code></a> such that it
+ returns <code>true</code> only when the argument is another instance of this class
+ wrapping the same object.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab5"><a href="jdk.jpackage/jdk/jpackage/internal/model/JPackageException.html" title="class in jdk.jpackage.internal.model">JPackageException</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab5">
+<div class="block">Generic jpackage exception with non-null message.</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/Launcher.html" title="interface in jdk.jpackage.internal.model">Launcher</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
@@ -263,6 +274,15 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
 <div class="block">Default implementation of <a href="jdk.jpackage/jdk/jpackage/internal/model/LauncherModularStartupInfoMixin.html" title="interface in jdk.jpackage.internal.model"><code>LauncherModularStartupInfoMixin</code></a> interface.</div>
 </div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/model/LauncherShortcut.html" title="class in jdk.jpackage.internal.model">LauncherShortcut</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab4">
+<div class="block">A shortcut to launch an application launcher.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="jdk.jpackage/jdk/jpackage/internal/model/LauncherShortcutStartupDirectory.html" title="enum class in jdk.jpackage.internal.model">LauncherShortcutStartupDirectory</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">
+<div class="block">The directory in which to run an application launcher when it is started from
+ a shortcut.</div>
+</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/LauncherStartupInfo.html" title="interface in jdk.jpackage.internal.model">LauncherStartupInfo</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Generic startup configuration of an application launcher.</div>
@@ -277,62 +297,55 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/LibProvidersLookup.PackageLookup.html" title="interface in jdk.jpackage.internal">LibProvidersLookup.PackageLookup</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/LinuxAppBundler.html" title="class in jdk.jpackage.internal">LinuxAppBundler</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/LinuxApplication.html" title="interface in jdk.jpackage.internal.model">LinuxApplication</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/LinuxApplication.html" title="interface in jdk.jpackage.internal.model">LinuxApplication</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Linux application.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/LinuxApplicationLayoutMixin.html" title="interface in jdk.jpackage.internal">LinuxApplicationLayoutMixin</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/LinuxApplicationLayoutMixin.Stub.html" title="class in jdk.jpackage.internal">LinuxApplicationLayoutMixin.Stub</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/LinuxDebBundler.html" title="class in jdk.jpackage.internal">LinuxDebBundler</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/LinuxDebPackage.html" title="interface in jdk.jpackage.internal.model">LinuxDebPackage</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/LinuxApplicationLayoutMixin.html" title="interface in jdk.jpackage.internal">LinuxApplicationLayoutMixin</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/LinuxApplicationLayoutMixin.Stub.html" title="class in jdk.jpackage.internal">LinuxApplicationLayoutMixin.Stub</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/LinuxBundlingEnvironment.html" title="class in jdk.jpackage.internal">LinuxBundlingEnvironment</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/LinuxDebPackage.html" title="interface in jdk.jpackage.internal.model">LinuxDebPackage</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Linux DEB package.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/LinuxDebPackageMixin.html" title="interface in jdk.jpackage.internal.model">LinuxDebPackageMixin</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/LinuxDebPackageMixin.html" title="interface in jdk.jpackage.internal.model">LinuxDebPackageMixin</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Details of Linux DEB package.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/model/LinuxDebPackageMixin.Stub.html" title="class in jdk.jpackage.internal.model">LinuxDebPackageMixin.Stub</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/model/LinuxDebPackageMixin.Stub.html" title="class in jdk.jpackage.internal.model">LinuxDebPackageMixin.Stub</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab4">
 <div class="block">Default implementation of <a href="jdk.jpackage/jdk/jpackage/internal/model/LinuxDebPackageMixin.html" title="interface in jdk.jpackage.internal.model"><code>LinuxDebPackageMixin</code></a> interface.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/LinuxLauncher.html" title="interface in jdk.jpackage.internal.model">LinuxLauncher</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/LinuxLauncher.html" title="interface in jdk.jpackage.internal.model">LinuxLauncher</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Linux application launcher.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/LinuxLauncherMixin.html" title="interface in jdk.jpackage.internal.model">LinuxLauncherMixin</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/LinuxLauncherMixin.html" title="interface in jdk.jpackage.internal.model">LinuxLauncherMixin</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Details of Linux application launcher.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/model/LinuxLauncherMixin.Stub.html" title="class in jdk.jpackage.internal.model">LinuxLauncherMixin.Stub</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab4">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/model/LinuxLauncherMixin.Stub.html" title="class in jdk.jpackage.internal.model">LinuxLauncherMixin.Stub</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
 <div class="block">Default implementation of <a href="jdk.jpackage/jdk/jpackage/internal/model/LinuxLauncherMixin.html" title="interface in jdk.jpackage.internal.model"><code>LinuxLauncherMixin</code></a> interface.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/LinuxLaunchersAsServices.html" title="class in jdk.jpackage.internal">LinuxLaunchersAsServices</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/LinuxLaunchersAsServices.html" title="class in jdk.jpackage.internal">LinuxLaunchersAsServices</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Helper to install launchers as services using "systemd".</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/LinuxPackage.html" title="interface in jdk.jpackage.internal.model">LinuxPackage</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/LinuxPackage.html" title="interface in jdk.jpackage.internal.model">LinuxPackage</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Linux package.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/LinuxPackageMixin.html" title="interface in jdk.jpackage.internal.model">LinuxPackageMixin</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/LinuxPackageMixin.html" title="interface in jdk.jpackage.internal.model">LinuxPackageMixin</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Details of Linux package.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/model/LinuxPackageMixin.Stub.html" title="class in jdk.jpackage.internal.model">LinuxPackageMixin.Stub</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab4">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/model/LinuxPackageMixin.Stub.html" title="class in jdk.jpackage.internal.model">LinuxPackageMixin.Stub</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
 <div class="block">Default implementation of <a href="jdk.jpackage/jdk/jpackage/internal/model/LinuxPackageMixin.html" title="interface in jdk.jpackage.internal.model"><code>LinuxPackageMixin</code></a> interface.</div>
-</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/LinuxRpmBundler.html" title="class in jdk.jpackage.internal">LinuxRpmBundler</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
-<div class="block">There are two command line options to configure license information for RPM
- packaging: --linux-rpm-license-type and --license-file.</div>
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/LinuxRpmPackage.html" title="interface in jdk.jpackage.internal.model">LinuxRpmPackage</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab1">
@@ -358,25 +371,21 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/Log.Logger.html" title="class in jdk.jpackage.internal">Log.Logger</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/MacAppBundler.html" title="class in jdk.jpackage.internal">MacAppBundler</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/MacApplication.html" title="interface in jdk.jpackage.internal.model">MacApplication</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="jdk.jpackage/jdk/jpackage/internal/model/MacApplication.ExtraAppImageFileField.html" title="enum class in jdk.jpackage.internal.model">MacApplication.ExtraAppImageFileField</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/MacApplicationLayoutMixin.html" title="interface in jdk.jpackage.internal">MacApplicationLayoutMixin</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/MacApplicationLayoutMixin.Stub.html" title="class in jdk.jpackage.internal">MacApplicationLayoutMixin.Stub</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/MacApplicationMixin.html" title="interface in jdk.jpackage.internal.model">MacApplicationMixin</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/model/MacApplicationMixin.Stub.html" title="class in jdk.jpackage.internal.model">MacApplicationMixin.Stub</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/MacBundlingEnvironment.html" title="class in jdk.jpackage.internal">MacBundlingEnvironment</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/MacApplication.html" title="interface in jdk.jpackage.internal.model">MacApplication</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="jdk.jpackage/jdk/jpackage/internal/model/MacApplication.ExtraAppImageFileField.html" title="enum class in jdk.jpackage.internal.model">MacApplication.ExtraAppImageFileField</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/MacApplicationLayoutMixin.html" title="interface in jdk.jpackage.internal">MacApplicationLayoutMixin</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/MacApplicationLayoutMixin.Stub.html" title="class in jdk.jpackage.internal">MacApplicationLayoutMixin.Stub</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/MacApplicationMixin.html" title="interface in jdk.jpackage.internal.model">MacApplicationMixin</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/model/MacApplicationMixin.Stub.html" title="class in jdk.jpackage.internal.model">MacApplicationMixin.Stub</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/MacBaseInstallerBundler.html" title="class in jdk.jpackage.internal">MacBaseInstallerBundler</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/MacCertificateUtils.html" title="class in jdk.jpackage.internal">MacCertificateUtils</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/MacDmgBundler.html" title="class in jdk.jpackage.internal">MacDmgBundler</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/MacCertificateUtils.html" title="class in jdk.jpackage.internal">MacCertificateUtils</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/MacDmgPackage.html" title="interface in jdk.jpackage.internal.model">MacDmgPackage</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
@@ -402,39 +411,55 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/model/MacPackageMixin.Stub.html" title="class in jdk.jpackage.internal.model">MacPackageMixin.Stub</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/MacPkgBundler.html" title="class in jdk.jpackage.internal">MacPkgBundler</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/MacPkgPackage.html" title="interface in jdk.jpackage.internal.model">MacPkgPackage</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/MacPkgPackageMixin.html" title="interface in jdk.jpackage.internal.model">MacPkgPackageMixin</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/MacPkgPackage.html" title="interface in jdk.jpackage.internal.model">MacPkgPackage</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/model/MacPkgPackageMixin.Stub.html" title="class in jdk.jpackage.internal.model">MacPkgPackageMixin.Stub</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/MacPkgPackageMixin.html" title="interface in jdk.jpackage.internal.model">MacPkgPackageMixin</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/model/MacPkgPackageMixin.Stub.html" title="class in jdk.jpackage.internal.model">MacPkgPackageMixin.Stub</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/cli/Main.html" title="class in jdk.jpackage.internal.cli">Main</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Main jpackage entry point.</div>
+</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/main/Main.html" title="class in jdk.jpackage.main">Main</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/model/MsiVersion.html" title="class in jdk.jpackage.internal.model">MsiVersion</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/cli/Main.Provider.html" title="class in jdk.jpackage.internal.cli">Main.Provider</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/util/MultiResourceBundle.html" title="class in jdk.jpackage.internal.util">MultiResourceBundle</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/model/MsiVersion.html" title="class in jdk.jpackage.internal.model">MsiVersion</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/Package.html" title="interface in jdk.jpackage.internal.model">Package</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/util/MultiResourceBundle.html" title="class in jdk.jpackage.internal.util">MultiResourceBundle</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/cli/OptionIdentifier.html" title="interface in jdk.jpackage.internal.cli">OptionIdentifier</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/cli/OptionIdentifier.Details.html" title="class in jdk.jpackage.internal.cli">OptionIdentifier.Details</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/cli/Options.html" title="interface in jdk.jpackage.internal.cli">Options</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="block">R/O collection of objects associated with option identifiers.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/cli/OptionValue.html" title="interface in jdk.jpackage.internal.cli">OptionValue&lt;T&gt;</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">Typed getter of option values in <a href="jdk.jpackage/jdk/jpackage/internal/cli/Options.html" title="interface in jdk.jpackage.internal.cli"><code>Options</code></a> objects.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/cli/OptionValue.Builder.html" title="class in jdk.jpackage.internal.cli">OptionValue.Builder&lt;T&gt;</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/cli/OptionValue.Internal.html" title="class in jdk.jpackage.internal.cli">OptionValue.Internal</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/Package.html" title="interface in jdk.jpackage.internal.model">Package</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Native application package.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/model/Package.Stub.html" title="class in jdk.jpackage.internal.model">Package.Stub</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/model/Package.Stub.html" title="class in jdk.jpackage.internal.model">Package.Stub</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab4">
 <div class="block">Default implementation of <a href="jdk.jpackage/jdk/jpackage/internal/model/Package.html" title="interface in jdk.jpackage.internal.model"><code>Package</code></a> interface.</div>
-</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab5"><a href="jdk.jpackage/jdk/jpackage/internal/model/PackagerException.html" title="class in jdk.jpackage.internal.model">PackagerException</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab5">
-<div class="block">Signals that error has occurred at packaging phase.</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/PackageType.html" title="interface in jdk.jpackage.internal.model">PackageType</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Generic package type.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/PackageWriter.html" title="interface in jdk.jpackage.internal.model">PackageWriter</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
-<div class="block">Creates native package from the given <a href="jdk.jpackage/jdk/jpackage/internal/model/Package.html" title="interface in jdk.jpackage.internal.model"><code>Package</code></a> object.</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/model/ParseUtils.html" title="class in jdk.jpackage.internal.model">ParseUtils</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Collection of functions to create instances of types defined in this package from strings.</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/util/PathGroup.html" title="class in jdk.jpackage.internal.util">PathGroup</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
@@ -451,13 +476,31 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/model/PkgSigningConfig.Stub.html" title="class in jdk.jpackage.internal.model">PkgSigningConfig.Stub</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/util/PListReader.html" title="class in jdk.jpackage.internal.util">PListReader</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Property list (plist) file reader.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/util/PListReader.Raw.html" title="class in jdk.jpackage.internal.util">PListReader.Raw</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="jdk.jpackage/jdk/jpackage/internal/util/PListReader.Raw.Type.html" title="enum class in jdk.jpackage.internal.util">PListReader.Raw.Type</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/util/PListWriter.html" title="class in jdk.jpackage.internal.util">PListWriter</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/ResourceDirLauncherIcon.html" title="interface in jdk.jpackage.internal.model">ResourceDirLauncherIcon</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">Custom application launcher icon sourced from the resource directory.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/model/ResourceDirLauncherIcon.Stub.html" title="class in jdk.jpackage.internal.model">ResourceDirLauncherIcon.Stub</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
+<div class="block">Default implementation of <a href="jdk.jpackage/jdk/jpackage/internal/model/ResourceDirLauncherIcon.html" title="interface in jdk.jpackage.internal.model"><code>ResourceDirLauncherIcon</code></a> type.</div>
+</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/resources/ResourceLocator.html" title="class in jdk.jpackage.internal.resources">ResourceLocator</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/RetryExecutor.html" title="class in jdk.jpackage.internal">RetryExecutor</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/util/Result.html" title="class in jdk.jpackage.internal.util">Result&lt;T&gt;</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/util/RetryExecutor.html" title="class in jdk.jpackage.internal.util">RetryExecutor&lt;T,<wbr>E&gt;</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/util/RetryExecutor.Context.html" title="interface in jdk.jpackage.internal.util">RetryExecutor.Context&lt;T&gt;</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/RuntimeBuilder.html" title="interface in jdk.jpackage.internal.model">RuntimeBuilder</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Creates Java runtime.</div>
@@ -466,49 +509,79 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Java runtime app image layout.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/SigningIdentity.html" title="interface in jdk.jpackage.internal.model">SigningIdentity</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="jdk.jpackage/jdk/jpackage/internal/model/StandardPackageType.html" title="enum class in jdk.jpackage.internal.model">StandardPackageType</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/util/SetBuilder.html" title="class in jdk.jpackage.internal.util">SetBuilder&lt;T&gt;</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/SigningIdentity.html" title="interface in jdk.jpackage.internal.model">SigningIdentity</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/util/Slot.html" title="class in jdk.jpackage.internal.util">Slot&lt;T&gt;</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">A mutable container object for a value.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/cli/StandardAppImageFileOption.html" title="class in jdk.jpackage.internal.cli">StandardAppImageFileOption</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">jpackage options in the app image (".jpackage.xml") file</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="jdk.jpackage/jdk/jpackage/internal/cli/StandardAppImageFileOption.AppImageFileOptionScope.html" title="enum class in jdk.jpackage.internal.cli">StandardAppImageFileOption.AppImageFileOptionScope</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab5"><a href="jdk.jpackage/jdk/jpackage/internal/cli/StandardAppImageFileOption.InvalidOptionValueException.html" title="class in jdk.jpackage.internal.cli">StandardAppImageFileOption.InvalidOptionValueException</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab5">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab5"><a href="jdk.jpackage/jdk/jpackage/internal/cli/StandardAppImageFileOption.MissingMandatoryOptionException.html" title="class in jdk.jpackage.internal.cli">StandardAppImageFileOption.MissingMandatoryOptionException</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab5">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="jdk.jpackage/jdk/jpackage/internal/cli/StandardBundlingOperation.html" title="enum class in jdk.jpackage.internal.cli">StandardBundlingOperation</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab3">
+<div class="block">Standard jpackage operations.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/cli/StandardFaOption.html" title="class in jdk.jpackage.internal.cli">StandardFaOption</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">jpackage file association options</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/cli/StandardOption.html" title="class in jdk.jpackage.internal.cli">StandardOption</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">jpackage command line options</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="jdk.jpackage/jdk/jpackage/internal/model/StandardPackageType.html" title="enum class in jdk.jpackage.internal.model">StandardPackageType</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab3">
 <div class="block">Standard native package types.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/util/StringBundle.html" title="interface in jdk.jpackage.internal.util">StringBundle</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/cli/StandardValidator.html" title="class in jdk.jpackage.internal.cli">StandardValidator</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab5"><a href="jdk.jpackage/jdk/jpackage/internal/cli/StandardValidator.DirectoryListingIOException.html" title="class in jdk.jpackage.internal.cli">StandardValidator.DirectoryListingIOException</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab5">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/util/StringBundle.html" title="interface in jdk.jpackage.internal.util">StringBundle</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">String bundle contains locale-specific strings.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/pipeline/TaskPipelineBuilder.html" title="class in jdk.jpackage.internal.pipeline">TaskPipelineBuilder</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/pipeline/TaskSpecBuilder.html" title="class in jdk.jpackage.internal.pipeline">TaskSpecBuilder&lt;T&gt;</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/pipeline/TaskPipelineBuilder.html" title="class in jdk.jpackage.internal.pipeline">TaskPipelineBuilder</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/util/function/ThrowingBiConsumer.html" title="interface in jdk.jpackage.internal.util.function">ThrowingBiConsumer&lt;T,<wbr>U&gt;</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/pipeline/TaskSpecBuilder.html" title="class in jdk.jpackage.internal.pipeline">TaskSpecBuilder&lt;T&gt;</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/util/TeeOutputStream.html" title="class in jdk.jpackage.internal.util">TeeOutputStream</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/util/function/ThrowingBiConsumer.html" title="interface in jdk.jpackage.internal.util.function">ThrowingBiConsumer&lt;T,<wbr>U,<wbr>E&gt;</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/util/function/ThrowingBiFunction.html" title="interface in jdk.jpackage.internal.util.function">ThrowingBiFunction&lt;T,<wbr>U,<wbr>R&gt;</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/util/function/ThrowingBiFunction.html" title="interface in jdk.jpackage.internal.util.function">ThrowingBiFunction&lt;T,<wbr>U,<wbr>R,<wbr>E&gt;</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/util/function/ThrowingConsumer.html" title="interface in jdk.jpackage.internal.util.function">ThrowingConsumer&lt;T&gt;</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/util/function/ThrowingConsumer.html" title="interface in jdk.jpackage.internal.util.function">ThrowingConsumer&lt;T,<wbr>E&gt;</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/util/function/ThrowingFunction.html" title="interface in jdk.jpackage.internal.util.function">ThrowingFunction&lt;T,<wbr>R&gt;</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/util/function/ThrowingFunction.html" title="interface in jdk.jpackage.internal.util.function">ThrowingFunction&lt;T,<wbr>R,<wbr>E&gt;</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/util/function/ThrowingRunnable.html" title="interface in jdk.jpackage.internal.util.function">ThrowingRunnable</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/util/function/ThrowingRunnable.html" title="interface in jdk.jpackage.internal.util.function">ThrowingRunnable&lt;E&gt;</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/util/function/ThrowingSupplier.html" title="interface in jdk.jpackage.internal.util.function">ThrowingSupplier&lt;T&gt;</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/util/function/ThrowingSupplier.html" title="interface in jdk.jpackage.internal.util.function">ThrowingSupplier&lt;T,<wbr>E&gt;</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/util/function/ThrowingUnaryOperator.html" title="interface in jdk.jpackage.internal.util.function">ThrowingUnaryOperator&lt;T&gt;</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/util/function/ThrowingUnaryOperator.html" title="interface in jdk.jpackage.internal.util.function">ThrowingUnaryOperator&lt;T,<wbr>E&gt;</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/util/TokenReplace.html" title="class in jdk.jpackage.internal.util">TokenReplace</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Class to replace tokens in strings.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/ToolValidator.html" title="class in jdk.jpackage.internal">ToolValidator</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/WinAppBundler.html" title="class in jdk.jpackage.internal">WinAppBundler</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/WinApplication.html" title="interface in jdk.jpackage.internal.model">WinApplication</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/WinApplicationMixin.html" title="interface in jdk.jpackage.internal.model">WinApplicationMixin</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/model/WinApplicationMixin.Stub.html" title="class in jdk.jpackage.internal.model">WinApplicationMixin.Stub</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/WinExeBundler.html" title="class in jdk.jpackage.internal">WinExeBundler</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/WinBundlingEnvironment.html" title="class in jdk.jpackage.internal">WinBundlingEnvironment</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/WinExePackage.html" title="interface in jdk.jpackage.internal.model">WinExePackage</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
@@ -522,30 +595,26 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/model/WinLauncherMixin.Stub.html" title="class in jdk.jpackage.internal.model">WinLauncherMixin.Stub</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="jdk.jpackage/jdk/jpackage/internal/model/WinLauncherMixin.WinShortcut.html" title="enum class in jdk.jpackage.internal.model">WinLauncherMixin.WinShortcut</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/WinMsiBundler.html" title="class in jdk.jpackage.internal">WinMsiBundler</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
-<div class="block">WinMsiBundler
-
- Produces .msi installer from application image.</div>
-</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/WinMsiPackage.html" title="interface in jdk.jpackage.internal.model">WinMsiPackage</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/model/WinMsiPackageMixin.html" title="interface in jdk.jpackage.internal.model">WinMsiPackageMixin</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="jdk.jpackage/jdk/jpackage/internal/model/WinMsiPackageMixin.Stub.html" title="class in jdk.jpackage.internal.model">WinMsiPackageMixin.Stub</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="jdk.jpackage/jdk/jpackage/internal/WixTool.html" title="enum class in jdk.jpackage.internal">WixTool</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab3">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/cli/WithOptionIdentifier.html" title="interface in jdk.jpackage.internal.cli">WithOptionIdentifier</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">A type with an option identifier.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="jdk.jpackage/jdk/jpackage/internal/WixTool.html" title="enum class in jdk.jpackage.internal">WixTool</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">
 <div class="block">WiX tool.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/util/XmlConsumer.html" title="interface in jdk.jpackage.internal.util">XmlConsumer</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/util/XmlUtils.html" title="class in jdk.jpackage.internal.util">XmlUtils</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/util/XmlUtils.XmlConsumerNoArg.html" title="interface in jdk.jpackage.internal.util">XmlUtils.XmlConsumerNoArg</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/util/XmlConsumer.html" title="interface in jdk.jpackage.internal.util">XmlConsumer</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="jdk.jpackage/jdk/jpackage/internal/util/XmlUtils.html" title="class in jdk.jpackage.internal.util">XmlUtils</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="jdk.jpackage/jdk/jpackage/internal/util/XmlUtils.XmlConsumerNoArg.html" title="interface in jdk.jpackage.internal.util">XmlUtils.XmlConsumerNoArg</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
 </div>
 </div>
 </div>

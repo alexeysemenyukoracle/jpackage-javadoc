@@ -61,6 +61,7 @@ loadScripts(document, 'script');</script>
 <button class="hide-sidebar"><span>Hide sidebar&nbsp;</span>&#10094;</button><button class="show-sidebar">&#10095;<span>&nbsp;Show sidebar</span></button>
 <ol class="toc-list">
 <li><a href="#" tabindex="0">Description</a></li>
+<li><a href="#nested-class-summary" tabindex="0">Nested Class Summary</a></li>
 <li><a href="#constructor-summary" tabindex="0">Constructor Summary</a></li>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
@@ -71,9 +72,18 @@ loadScripts(document, 'script');</script>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
+<li><a href="#toMap(boolean)" tabindex="0">toMap(boolean)</a></li>
 <li><a href="#queryValue(java.lang.String)" tabindex="0">queryValue(String)</a></li>
+<li><a href="#findValue(java.lang.String)" tabindex="0">findValue(String)</a></li>
+<li><a href="#queryDictValue(java.lang.String)" tabindex="0">queryDictValue(String)</a></li>
+<li><a href="#findDictValue(java.lang.String)" tabindex="0">findDictValue(String)</a></li>
 <li><a href="#queryBoolValue(java.lang.String)" tabindex="0">queryBoolValue(String)</a></li>
-<li><a href="#queryArrayValue(java.lang.String)" tabindex="0">queryArrayValue(String)</a></li>
+<li><a href="#findBoolValue(java.lang.String)" tabindex="0">findBoolValue(String)</a></li>
+<li><a href="#queryStringArrayValue(java.lang.String)" tabindex="0">queryStringArrayValue(String)</a></li>
+<li><a href="#findStringArrayValue(java.lang.String)" tabindex="0">findStringArrayValue(String)</a></li>
+<li><a href="#queryArrayValue(java.lang.String,boolean)" tabindex="0">queryArrayValue(String, boolean)</a></li>
+<li><a href="#findArrayValue(java.lang.String,boolean)" tabindex="0">findArrayValue(String, boolean)</a></li>
+<li><a href="#toXmlConsumer()" tabindex="0">toXmlConsumer()</a></li>
 </ol>
 </li>
 </ol>
@@ -91,10 +101,26 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">PListReader</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Property list (plist) file reader.</div>
 </div>
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<li>
+<section class="nested-class-summary" id="nested-class-summary">
+<h2>Nested Class Summary</h2>
+<div class="caption"><span>Nested Classes</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Class</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="PListReader.Raw.html" class="type-name-link" title="class in jdk.jpackage.internal.util">PListReader.Raw</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+</div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li>
 <section class="constructor-summary" id="constructor-summary">
@@ -105,8 +131,10 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(byte%5B%5D)" class="member-name-link">PListReader</a><wbr>(byte[]&nbsp;xmlData)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(org.w3c.dom.Node)" class="member-name-link">PListReader</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;doc)</code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(org.w3c.dom.Node)" class="member-name-link">PListReader</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;node)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Creates plist reader from the given node.</div>
+</div>
 </div>
 </section>
 </li>
@@ -121,15 +149,61 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#queryArrayValue(java.lang.String)" class="member-name-link">queryArrayValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;keyName)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#findArrayValue(java.lang.String,boolean)" class="member-name-link">findArrayValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;keyName,
+ boolean&nbsp;fetchDictionaries)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#queryBoolValue(java.lang.String)" class="member-name-link">queryBoolValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;keyName)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#findBoolValue(java.lang.String)" class="member-name-link">findBoolValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;keyName)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#queryValue(java.lang.String)" class="member-name-link">queryValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;keyName)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;<a href="PListReader.html" title="class in jdk.jpackage.internal.util">PListReader</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#findDictValue(java.lang.String)" class="member-name-link">findDictValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;keyName)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#findStringArrayValue(java.lang.String)" class="member-name-link">findStringArrayValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;keyName)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#findValue(java.lang.String)" class="member-name-link">findValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;keyName)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#queryArrayValue(java.lang.String,boolean)" class="member-name-link">queryArrayValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;keyName,
+ boolean&nbsp;fetchDictionaries)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the given array property in the underlying "dict"
+ element as a stream of <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link"><code>Object</code></a>-s.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#queryBoolValue(java.lang.String)" class="member-name-link">queryBoolValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;keyName)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the given boolean property in the underlying "dict"
+ element.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PListReader.html" title="class in jdk.jpackage.internal.util">PListReader</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#queryDictValue(java.lang.String)" class="member-name-link">queryDictValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;keyName)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the given "dict" property in the underlying "dict"
+ element.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#queryStringArrayValue(java.lang.String)" class="member-name-link">queryStringArrayValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;keyName)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the given array property in the underlying "dict"
+ element as a list of strings.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#queryValue(java.lang.String)" class="member-name-link">queryValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;keyName)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the given string property in the underlying "dict"
+ element.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toMap(boolean)" class="member-name-link">toMap</a><wbr>(boolean&nbsp;fetchDictionaries)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the contents of the the underlying "dict" element as a Map.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="XmlConsumer.html" title="interface in jdk.jpackage.internal.util">XmlConsumer</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toXmlConsumer()" class="member-name-link">toXmlConsumer</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -151,7 +225,20 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;(org.w3c.dom.Node)">
 <h3>PListReader</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">PListReader</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;doc)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">PListReader</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;node)</span></div>
+<div class="block">Creates plist reader from the given node.
+ <p>
+ If the specified node is an element with the name "dict", the reader is bound
+ to the specified node; otherwise, it is bound to the <code>/plist/dict</code>
+ element in the document.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>node</code> - the node</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/NoSuchElementException.html" title="class or interface in java.util" class="external-link">NoSuchElementException</a></code> - if the specified node is not an element with
+                                name "dict" and there is no
+                                <code>/plist/dict</code> node in the document</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -181,10 +268,86 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="toMap(boolean)">
+<h3>toMap</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span>&nbsp;<span class="element-name">toMap</span><wbr><span class="parameters">(boolean&nbsp;fetchDictionaries)</span></div>
+<div class="block">Returns the contents of the the underlying "dict" element as a Map.
+ <p>
+ The keys in the returned map are names of the properties.
+ <p>
+ Values of nested "dict" properties are stored as <code>Map&lt;String, Object&gt;</code>
+ or <code>PListReader</code> objects depending on the value of the
+ <code>fetchDictionaries</code> parameter.
+ <p>
+ Values of "array" properties are stored as <code>List&lt;Object&gt;</code> objects.
+ <p>
+ Values of other properties are stored as <code>Raw</code> objects.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>fetchDictionaries</code> - controls the type of objects of nested "dict"
+                          elements. If the value is <code>true</code>,
+                          <code>Map&lt;String, Object&gt;</code> type is used, and
+                          <code>PListReader</code> type otherwise.</dd>
+<dt>Returns:</dt>
+<dd>the contents of the the underlying "dict" element as a Map</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="queryValue(java.lang.String)">
 <h3>queryValue</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">queryValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;keyName)</span></div>
+<div class="block">Returns the value of the given string property in the underlying "dict"
+ element.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>keyName</code> - the name of a string property whose value to query</dd>
+<dt>Returns:</dt>
+<dd>the value of the string property with the specified name in the
+         underlying "dict" element</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/NoSuchElementException.html" title="class or interface in java.util" class="external-link">NoSuchElementException</a></code> - if there is no string property with the given
+                                name in the underlying "dict" element</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="findValue(java.lang.String)">
+<h3>findValue</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">findValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;keyName)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="queryDictValue(java.lang.String)">
+<h3>queryDictValue</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PListReader.html" title="class in jdk.jpackage.internal.util">PListReader</a></span>&nbsp;<span class="element-name">queryDictValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;keyName)</span></div>
+<div class="block">Returns the value of the given "dict" property in the underlying "dict"
+ element.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>keyName</code> - the name of a "dict" property whose value to query</dd>
+<dt>Returns:</dt>
+<dd>the value of the "dict" property with the specified name in the
+         underlying "dict" element</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/NoSuchElementException.html" title="class or interface in java.util" class="external-link">NoSuchElementException</a></code> - if there is no "dict" property with the given
+                                name in the underlying "dict" element</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="findDictValue(java.lang.String)">
+<h3>findDictValue</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="PListReader.html" title="class in jdk.jpackage.internal.util">PListReader</a>&gt;</span>&nbsp;<span class="element-name">findDictValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;keyName)</span></div>
 </div>
 </section>
 </li>
@@ -193,14 +356,113 @@ loadScripts(document, 'script');</script>
 <h3>queryBoolValue</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">queryBoolValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;keyName)</span></div>
+<div class="block">Returns the value of the given boolean property in the underlying "dict"
+ element.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>keyName</code> - the name of a boolean property whose value to query</dd>
+<dt>Returns:</dt>
+<dd>the value of the boolean property with the specified name in the
+         underlying "dict" element</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/NoSuchElementException.html" title="class or interface in java.util" class="external-link">NoSuchElementException</a></code> - if there is no string property with the given
+                                name in the underlying "dict" element</dd>
+</dl>
 </div>
 </section>
 </li>
 <li>
-<section class="detail" id="queryArrayValue(java.lang.String)">
+<section class="detail" id="findBoolValue(java.lang.String)">
+<h3>findBoolValue</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;</span>&nbsp;<span class="element-name">findBoolValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;keyName)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="queryStringArrayValue(java.lang.String)">
+<h3>queryStringArrayValue</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">queryStringArrayValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;keyName)</span></div>
+<div class="block">Returns the value of the given array property in the underlying "dict"
+ element as a list of strings.
+ <p>
+ Processes the result of calling 
+<details class="invalid-tag">
+<summary>invalid reference</summary>
+<pre><code>#queryArrayValue(String)</code></pre>
+</details>
+ on the
+ specified property name by filtering <a href="PListReader.Raw.html" title="class in jdk.jpackage.internal.util"><code>PListReader.Raw</code></a> instances of type
+ <a href="PListReader.Raw.Type.html#STRING"><code>PListReader.Raw.Type.STRING</code></a>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>keyName</code> - the name of an array property whose value to query</dd>
+<dt>Returns:</dt>
+<dd>the value of the array property with the specified name in the
+         underlying "dict" element</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/NoSuchElementException.html" title="class or interface in java.util" class="external-link">NoSuchElementException</a></code> - if there is no array property with the given
+                                name in the underlying "dict" element</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="findStringArrayValue(java.lang.String)">
+<h3>findStringArrayValue</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&gt;</span>&nbsp;<span class="element-name">findStringArrayValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;keyName)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="queryArrayValue(java.lang.String,boolean)">
 <h3>queryArrayValue</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">queryArrayValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;keyName)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span>&nbsp;<span class="element-name">queryArrayValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;keyName,
+ boolean&nbsp;fetchDictionaries)</span></div>
+<div class="block">Returns the value of the given array property in the underlying "dict"
+ element as a stream of <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link"><code>Object</code></a>-s.
+ <p>
+ Values of "dict" array items are stored as <code>Map&lt;String, Object&gt;</code> or
+ <code>PListReader</code> objects depending on the value of the
+ <code>fetchDictionaries</code> parameter.
+ <p>
+ Values of "array" array items are stored as <code>List&lt;Object&gt;</code> objects.
+ <p>
+ Values of other types are stored as <code>Raw</code> objects.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>keyName</code> - the name of an array property whose value to query</dd>
+<dd><code>fetchDictionaries</code> - controls the type of objects of "dict" elements. If
+                          the value is <code>true</code>,
+                          <code>Map&lt;String, Object&gt;</code> type is used, and
+                          <code>PListReader</code> type otherwise.</dd>
+<dt>Returns:</dt>
+<dd>the value of the array property with the specified name in the
+         underlying "dict" element</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/NoSuchElementException.html" title="class or interface in java.util" class="external-link">NoSuchElementException</a></code> - if there is no array key with the given name
+                                in the underlying "dict" element</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="findArrayValue(java.lang.String,boolean)">
+<h3>findArrayValue</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&gt;</span>&nbsp;<span class="element-name">findArrayValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;keyName,
+ boolean&nbsp;fetchDictionaries)</span></div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="toXmlConsumer()">
+<h3>toXmlConsumer</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="XmlConsumer.html" title="interface in jdk.jpackage.internal.util">XmlConsumer</a></span>&nbsp;<span class="element-name">toXmlConsumer</span>()</div>
 </div>
 </section>
 </li>

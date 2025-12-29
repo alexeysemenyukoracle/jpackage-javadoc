@@ -67,7 +67,11 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#runtimeDirectory()" tabindex="0">runtimeDirectory()</a></li>
 <li><a href="#rootDirectory()" tabindex="0">rootDirectory()</a></li>
+<li><a href="#resetRootDirectory()" tabindex="0">resetRootDirectory()</a></li>
+<li><a href="#isResolved()" tabindex="0">isResolved()</a></li>
 <li><a href="#resolveAt(java.nio.file.Path)" tabindex="0">resolveAt(Path)</a></li>
+<li><a href="#unresolve()" tabindex="0">unresolve()</a></li>
+<li><a href="#map(java.util.function.UnaryOperator)" tabindex="0">map(UnaryOperator)</a></li>
 <li><a href="#toPathGroup(jdk.jpackage.internal.model.AppImageLayout)" tabindex="0">toPathGroup(AppImageLayout)</a></li>
 </ol>
 </li>
@@ -94,9 +98,14 @@ loadScripts(document, 'script');</script>
 
  App image layout is a collection of files and directories with specific roles
  (executables, configuration files, etc.) sharing the same root directory.
-
- The layout is "unresolved" if the root directory is an empty string and
- "resolved" otherwise.</div>
+ <p>
+ The layout is "unresolved" if the root directory is an empty path
+ (<code>Path.of("")</code>) and "resolved" otherwise.
+ <p>
+ The return value of the <a href="#runtimeDirectory()"><code>runtimeDirectory()</code></a> method call is always a
+ path starting with the path returned by the <a href="#rootDirectory()"><code>rootDirectory()</code></a> method
+ call. Public methods without parameters and with the return type <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link"><code>Path</code></a>
+ in the derived interfaces must comply to this constrain.</div>
 </div>
 </section>
 <section class="summary">
@@ -123,32 +132,58 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="AppImageLayout.html" title="interface in jdk.jpackage.internal.model">AppImageLayout</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#resolveAt(java.nio.file.Path)" class="member-name-link">resolveAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;root)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Creates a copy of this app image resolved at the given root directory.</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#isResolved()" class="member-name-link">isResolved</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Returns <code>true</code> if the root directory of this app image layout is
+ not an empty path, i.e, if it is not equal to <code>Path.of("")</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#rootDirectory()" class="member-name-link">rootDirectory</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="AppImageLayout.html" title="interface in jdk.jpackage.internal.model">AppImageLayout</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#map(java.util.function.UnaryOperator)" class="member-name-link">map</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/function/UnaryOperator.html" title="class or interface in java.util.function" class="external-link">UnaryOperator</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&gt;&nbsp;mapper)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Root directory of this app image.</div>
+<div class="block">Returns a copy of this app image layout with the specified mapper applied to
+ every path.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="AppImageLayout.html" title="interface in jdk.jpackage.internal.model">AppImageLayout</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#resetRootDirectory()" class="member-name-link">resetRootDirectory</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns a copy of this app image layout with the root directory set to an empty
+ path (<code>Path.of("")</code>) or this instance if its root directory is already
+ an empty path.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="AppImageLayout.html" title="interface in jdk.jpackage.internal.model">AppImageLayout</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#resolveAt(java.nio.file.Path)" class="member-name-link">resolveAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;root)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Creates a copy of this app image layout resolved at the given root directory.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#runtimeDirectory()" class="member-name-link">runtimeDirectory</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#rootDirectory()" class="member-name-link">rootDirectory</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Root directory of this app image layout.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#runtimeDirectory()" class="member-name-link">runtimeDirectory</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">A path to Java runtime directory.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="../util/PathGroup.html" title="class in jdk.jpackage.internal.util">PathGroup</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#toPathGroup(jdk.jpackage.internal.model.AppImageLayout)" class="member-name-link">toPathGroup</a><wbr>(<a href="AppImageLayout.html" title="interface in jdk.jpackage.internal.model">AppImageLayout</a>&nbsp;appImageLayout)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="../util/PathGroup.html" title="class in jdk.jpackage.internal.util">PathGroup</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#toPathGroup(jdk.jpackage.internal.model.AppImageLayout)" class="member-name-link">toPathGroup</a><wbr>(<a href="AppImageLayout.html" title="interface in jdk.jpackage.internal.model">AppImageLayout</a>&nbsp;appImageLayout)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">Creates <a href="../util/PathGroup.html" title="class in jdk.jpackage.internal.util"><code>PathGroup</code></a> object from the given <a href="AppImageLayout.html" title="interface in jdk.jpackage.internal.model"><code>AppImageLayout</code></a>
  instance.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="AppImageLayout.html" title="interface in jdk.jpackage.internal.model">AppImageLayout</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#unresolve()" class="member-name-link">unresolve</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Returns a copy of this app image layout resolved such that its root directory
+ is set to an empty path (<code>Path.of("")</code>) or this instance if its root
+ directory is already an empty path.</div>
 </div>
 </div>
 </div>
@@ -183,11 +218,41 @@ loadScripts(document, 'script');</script>
 <h3>rootDirectory</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></span>&nbsp;<span class="element-name">rootDirectory</span>()</div>
-<div class="block">Root directory of this app image.
+<div class="block">Root directory of this app image layout.
  It should normally be equal to <code>Path.of("")</code> for unresolved layout.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the root directory of this app image</dd>
+<dd>the root directory of this app image layout</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="resetRootDirectory()">
+<h3>resetRootDirectory</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="return-type"><a href="AppImageLayout.html" title="interface in jdk.jpackage.internal.model">AppImageLayout</a></span>&nbsp;<span class="element-name">resetRootDirectory</span>()</div>
+<div class="block">Returns a copy of this app image layout with the root directory set to an empty
+ path (<code>Path.of("")</code>) or this instance if its root directory is already
+ an empty path.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>an app image layout with the root directory set to an empty path</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="isResolved()">
+<h3>isResolved</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isResolved</span>()</div>
+<div class="block">Returns <code>true</code> if the root directory of this app image layout is
+ not an empty path, i.e, if it is not equal to <code>Path.of("")</code>.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd><code>true</code> if the root directory of this app image layout is
+         not an empty path</dd>
 </dl>
 </div>
 </section>
@@ -196,13 +261,45 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="resolveAt(java.nio.file.Path)">
 <h3>resolveAt</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="AppImageLayout.html" title="interface in jdk.jpackage.internal.model">AppImageLayout</a></span>&nbsp;<span class="element-name">resolveAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;root)</span></div>
-<div class="block">Creates a copy of this app image resolved at the given root directory.</div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="AppImageLayout.html" title="interface in jdk.jpackage.internal.model">AppImageLayout</a></span>&nbsp;<span class="element-name">resolveAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;root)</span></div>
+<div class="block">Creates a copy of this app image layout resolved at the given root directory.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>root</code> - path to a directory at which to resolve the layout</dd>
 <dt>Returns:</dt>
-<dd>a copy of this app image resolved at the given root directory</dd>
+<dd>a copy of this app image layout resolved at the given root directory</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="unresolve()">
+<h3>unresolve</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="AppImageLayout.html" title="interface in jdk.jpackage.internal.model">AppImageLayout</a></span>&nbsp;<span class="element-name">unresolve</span>()</div>
+<div class="block">Returns a copy of this app image layout resolved such that its root directory
+ is set to an empty path (<code>Path.of("")</code>) or this instance if its root
+ directory is already an empty path.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>an app image layout resolved at <code>Path.of("")</code> path</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="map(java.util.function.UnaryOperator)">
+<h3>map</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="return-type"><a href="AppImageLayout.html" title="interface in jdk.jpackage.internal.model">AppImageLayout</a></span>&nbsp;<span class="element-name">map</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/function/UnaryOperator.html" title="class or interface in java.util.function" class="external-link">UnaryOperator</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&gt;&nbsp;mapper)</span></div>
+<div class="block">Returns a copy of this app image layout with the specified mapper applied to
+ every path.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>mapper</code> - the mapper to use with every path in this app image layout.</dd>
+<dt>Returns:</dt>
+<dd>the copy of this app image layout with the specified mapper applied
+         to every path</dd>
 </dl>
 </div>
 </section>

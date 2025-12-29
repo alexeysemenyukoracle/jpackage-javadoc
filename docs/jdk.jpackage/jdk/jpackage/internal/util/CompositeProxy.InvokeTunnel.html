@@ -91,32 +91,28 @@ loadScripts(document, 'script');</script>
  interfaces used with <a href="CompositeProxy.html" title="class in jdk.jpackage.internal.util"><code>CompositeProxy</code></a> class.
 
  Assumed implementation:
- 
-<div class="snippet-container"><button class="copy snippet-copy" aria-label="Copy snippet" onclick="copySnippet(this)"><span data-copied="Copied!">Copy</span><img src="../../../../../resource-files/copy.svg" alt="Copy snippet"></button>
-<pre class="snippet" id="snippet-jdk.jpackage.internal.util.CompositeProxy.InvokeTunnel1"><code>
-package org.foo;
+ <span class="invalid-tag">invalid input: '{@snippet :
 
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Method;
-import jdk.jpackage.internal.util.CompositeProxy;
+ package org.foo;
 
-final class CompositeProxyTunnel implements CompositeProxy.InvokeTunnel {
+ import java.lang.reflect.InvocationHandler;
+ import java.lang.reflect.Method;
+ import jdk.jpackage.internal.util.CompositeProxy;
 
-    @Override
-    public Object invoke(Object obj, Method method, Object[] args) throws Throwable {
-        return method.invoke(obj, args);
-    }
+ final class CompositeProxyTunnel implements CompositeProxy.InvokeTunnel {
 
-    @Override
-    public Object invokeDefault(Object proxy, Method method, Object[] args) throws Throwable {
-        return InvocationHandler.invokeDefault(proxy, method, args);
-    }
+     @Override
+     public Object invoke(Object obj, Method method, Object[] args) throws Throwable {
+         return method.invoke(obj, args);
+     }
 
-    static final CompositeProxyTunnel INSTANCE = new CompositeProxyTunnel();
-}
-</code></pre>
-</div>
-</div>
+     @Override
+     public Object invokeDefault(Object proxy, Method method, Object[] args) throws Throwable {
+         return InvocationHandler.invokeDefault(proxy, method, args);
+     }
+
+     static final CompositeProxyTunnel INSTANCE = new CompositeProxyTunnel();
+ }'</span></div>
 </div>
 </section>
 <section class="summary">

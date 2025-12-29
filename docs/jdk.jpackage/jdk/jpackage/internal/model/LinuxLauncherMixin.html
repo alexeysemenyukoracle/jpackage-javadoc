@@ -120,10 +120,10 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;<a href="LauncherShortcut.html" title="class in jdk.jpackage.internal.model">LauncherShortcut</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#shortcut()" class="member-name-link">shortcut</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Gets the start menu shortcut setting of this application launcher.</div>
+<div class="block">Gets the start menu shortcut of this application launcher.</div>
 </div>
 </div>
 </div>
@@ -143,20 +143,16 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="shortcut()">
 <h3>shortcut</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;</span>&nbsp;<span class="element-name">shortcut</span>()</div>
-<div class="block">Gets the start menu shortcut setting of this application launcher.
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="LauncherShortcut.html" title="class in jdk.jpackage.internal.model">LauncherShortcut</a>&gt;</span>&nbsp;<span class="element-name">shortcut</span>()</div>
+<div class="block">Gets the start menu shortcut of this application launcher.
  <p>
- Returns <code>true</code> if this application launcher was requested to have
- the start menu shortcut.
- <p>
- Returns <code>false</code> if this application launcher was requested not to
- have the start menu shortcut.
- <p>
- Returns an empty <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link"><code>Optional</code></a> instance if there was no request about the
- start menu shortcut for this application launcher.</div>
+ Returns a non-empty <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link"><code>Optional</code></a> instance if a request about the start
+ menu shortcut for this application launcher was made and an empty
+ <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link"><code>Optional</code></a> instance if there was no request about the start menu
+ shortcut for this application launcher.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the start menu shortcut setting of this application launcher</dd>
+<dd>the start menu shortcut of this application launcher</dd>
 </dl>
 </div>
 </section>

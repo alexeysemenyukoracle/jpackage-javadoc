@@ -67,7 +67,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(jdk.jpackage.internal.model.Application,jdk.jpackage.internal.model.PackageType,java.lang.String,java.lang.String,java.lang.String,java.util.Optional,java.util.Optional,java.util.Optional,java.nio.file.Path)" tabindex="0">Stub(Application, PackageType, String, String, String, Optional, Optional, Optional, Path)</a></li>
+<li><a href="#%3Cinit%3E(jdk.jpackage.internal.model.Application,jdk.jpackage.internal.model.PackageType,java.lang.String,java.lang.String,java.lang.String,java.util.Optional,java.util.Optional,java.util.Optional,jdk.jpackage.internal.model.AppImageLayout,java.nio.file.Path)" tabindex="0">Stub(Application, PackageType, String, String, String, Optional, Optional, Optional, AppImageLayout, Path)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -83,6 +83,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#aboutURL()" tabindex="0">aboutURL()</a></li>
 <li><a href="#licenseFile()" tabindex="0">licenseFile()</a></li>
 <li><a href="#predefinedAppImage()" tabindex="0">predefinedAppImage()</a></li>
+<li><a href="#installedPackageLayout()" tabindex="0">installedPackageLayout()</a></li>
 <li><a href="#relativeInstallDir()" tabindex="0">relativeInstallDir()</a></li>
 </ol>
 </li>
@@ -102,14 +103,14 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="Package.html" title="interface in jdk.jpackage.internal.model">Package</a></code></dd>
+<dd><code><a href="BundleSpec.html" title="interface in jdk.jpackage.internal.model">BundleSpec</a></code>, <code><a href="Package.html" title="interface in jdk.jpackage.internal.model">Package</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>Enclosing interface:</dt>
 <dd><code><a href="Package.html" title="interface in jdk.jpackage.internal.model">Package</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">Package.Stub</span>(<a href="Application.html" title="interface in jdk.jpackage.internal.model">Application</a>&nbsp;app, <a href="PackageType.html" title="interface in jdk.jpackage.internal.model">PackageType</a>&nbsp;type, <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;packageName, <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;description, <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;version, <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;aboutURL, <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&gt;&nbsp;licenseFile, <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&gt;&nbsp;predefinedAppImage, <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;relativeInstallDir)
+<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">Package.Stub</span>(<a href="Application.html" title="interface in jdk.jpackage.internal.model">Application</a>&nbsp;app, <a href="PackageType.html" title="interface in jdk.jpackage.internal.model">PackageType</a>&nbsp;type, <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;packageName, <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;description, <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;version, <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;aboutURL, <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&gt;&nbsp;licenseFile, <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&gt;&nbsp;predefinedAppImage, <a href="AppImageLayout.html" title="interface in jdk.jpackage.internal.model">AppImageLayout</a>&nbsp;installedPackageLayout, <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;relativeInstallDir)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a>
 implements <a href="Package.html" title="interface in jdk.jpackage.internal.model">Package</a></span></div>
 <div class="block">Default implementation of <a href="Package.html" title="interface in jdk.jpackage.internal.model"><code>Package</code></a> interface.</div>
@@ -134,7 +135,7 @@ implements <a href="Package.html" title="interface in jdk.jpackage.internal.mode
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(jdk.jpackage.internal.model.Application,jdk.jpackage.internal.model.PackageType,java.lang.String,java.lang.String,java.lang.String,java.util.Optional,java.util.Optional,java.util.Optional,java.nio.file.Path)" class="member-name-link">Stub</a><wbr>(<a href="Application.html" title="interface in jdk.jpackage.internal.model">Application</a>&nbsp;app,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(jdk.jpackage.internal.model.Application,jdk.jpackage.internal.model.PackageType,java.lang.String,java.lang.String,java.lang.String,java.util.Optional,java.util.Optional,java.util.Optional,jdk.jpackage.internal.model.AppImageLayout,java.nio.file.Path)" class="member-name-link">Stub</a><wbr>(<a href="Application.html" title="interface in jdk.jpackage.internal.model">Application</a>&nbsp;app,
  <a href="PackageType.html" title="interface in jdk.jpackage.internal.model">PackageType</a>&nbsp;type,
  <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;packageName,
  <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;description,
@@ -142,6 +143,7 @@ implements <a href="Package.html" title="interface in jdk.jpackage.internal.mode
  <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;aboutURL,
  <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&gt;&nbsp;licenseFile,
  <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&gt;&nbsp;predefinedAppImage,
+ <a href="AppImageLayout.html" title="interface in jdk.jpackage.internal.model">AppImageLayout</a>&nbsp;installedPackageLayout,
  <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;relativeInstallDir)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>Stub</code> record class.</div>
@@ -185,39 +187,44 @@ implements <a href="Package.html" title="interface in jdk.jpackage.internal.mode
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a hash code value for this object.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#licenseFile()" class="member-name-link">licenseFile</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppImageLayout.html" title="interface in jdk.jpackage.internal.model">AppImageLayout</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#installedPackageLayout()" class="member-name-link">installedPackageLayout</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>installedPackageLayout</code> record component.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#licenseFile()" class="member-name-link">licenseFile</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>licenseFile</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#packageName()" class="member-name-link">packageName</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#packageName()" class="member-name-link">packageName</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>packageName</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#predefinedAppImage()" class="member-name-link">predefinedAppImage</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#predefinedAppImage()" class="member-name-link">predefinedAppImage</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>predefinedAppImage</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#relativeInstallDir()" class="member-name-link">relativeInstallDir</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#relativeInstallDir()" class="member-name-link">relativeInstallDir</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>relativeInstallDir</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PackageType.html" title="interface in jdk.jpackage.internal.model">PackageType</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#type()" class="member-name-link">type</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PackageType.html" title="interface in jdk.jpackage.internal.model">PackageType</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#type()" class="member-name-link">type</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>type</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#version()" class="member-name-link">version</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#version()" class="member-name-link">version</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>version</code> record component.</div>
 </div>
 </div>
@@ -228,7 +235,7 @@ implements <a href="Package.html" title="interface in jdk.jpackage.internal.mode
 <code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-jdk.jpackage.internal.model.Package">Methods inherited from interface&nbsp;jdk.jpackage.internal.model.<a href="Package.html" title="interface in jdk.jpackage.internal.model">Package</a></h3>
-<code><a href="Package.html#appImageLayout()">appImageLayout</a>, <a href="Package.html#asApplicationLayout()">asApplicationLayout</a>, <a href="Package.html#asInstalledPackageApplicationLayout()">asInstalledPackageApplicationLayout</a>, <a href="Package.html#asPackageApplicationLayout()">asPackageApplicationLayout</a>, <a href="Package.html#asStandardPackageType()">asStandardPackageType</a>, <a href="Package.html#installedPackageLayout()">installedPackageLayout</a>, <a href="Package.html#isRuntimeInstaller()">isRuntimeInstaller</a>, <a href="Package.html#packageFileName()">packageFileName</a>, <a href="Package.html#packageFileNameWithSuffix()">packageFileNameWithSuffix</a>, <a href="Package.html#packageFileSuffix()">packageFileSuffix</a>, <a href="Package.html#packageLayout()">packageLayout</a></code></div>
+<code><a href="Package.html#appImageLayout()">appImageLayout</a>, <a href="Package.html#asApplicationLayout()">asApplicationLayout</a>, <a href="Package.html#asInstalledPackageApplicationLayout()">asInstalledPackageApplicationLayout</a>, <a href="Package.html#asStandardPackageType()">asStandardPackageType</a>, <a href="Package.html#isRuntimeInstaller()">isRuntimeInstaller</a>, <a href="Package.html#packageFileName()">packageFileName</a>, <a href="Package.html#packageFileNameWithSuffix()">packageFileNameWithSuffix</a>, <a href="Package.html#packageFileSuffix()">packageFileSuffix</a></code></div>
 </section>
 </li>
 </ul>
@@ -241,7 +248,7 @@ implements <a href="Package.html" title="interface in jdk.jpackage.internal.mode
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(jdk.jpackage.internal.model.Application,jdk.jpackage.internal.model.PackageType,java.lang.String,java.lang.String,java.lang.String,java.util.Optional,java.util.Optional,java.util.Optional,java.nio.file.Path)">
+<section class="detail" id="&lt;init&gt;(jdk.jpackage.internal.model.Application,jdk.jpackage.internal.model.PackageType,java.lang.String,java.lang.String,java.lang.String,java.util.Optional,java.util.Optional,java.util.Optional,jdk.jpackage.internal.model.AppImageLayout,java.nio.file.Path)">
 <h3>Stub</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Stub</span><wbr><span class="parameters">(<a href="Application.html" title="interface in jdk.jpackage.internal.model">Application</a>&nbsp;app,
@@ -252,6 +259,7 @@ implements <a href="Package.html" title="interface in jdk.jpackage.internal.mode
  <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;aboutURL,
  <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&gt;&nbsp;licenseFile,
  <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&gt;&nbsp;predefinedAppImage,
+ <a href="AppImageLayout.html" title="interface in jdk.jpackage.internal.model">AppImageLayout</a>&nbsp;installedPackageLayout,
  <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;relativeInstallDir)</span></div>
 <div class="block">Creates an instance of a <code>Stub</code> record class.</div>
 <dl class="notes">
@@ -264,6 +272,7 @@ implements <a href="Package.html" title="interface in jdk.jpackage.internal.mode
 <dd><code>aboutURL</code> - the value for the <code>aboutURL</code> record component</dd>
 <dd><code>licenseFile</code> - the value for the <code>licenseFile</code> record component</dd>
 <dd><code>predefinedAppImage</code> - the value for the <code>predefinedAppImage</code> record component</dd>
+<dd><code>installedPackageLayout</code> - the value for the <code>installedPackageLayout</code> record component</dd>
 <dd><code>relativeInstallDir</code> - the value for the <code>relativeInstallDir</code> record component</dd>
 </dl>
 </div>
@@ -440,6 +449,27 @@ implements <a href="Package.html" title="interface in jdk.jpackage.internal.mode
 <dd><code><a href="Package.html#predefinedAppImage()">predefinedAppImage</a></code>&nbsp;in interface&nbsp;<code><a href="Package.html" title="interface in jdk.jpackage.internal.model">Package</a></code></dd>
 <dt>Returns:</dt>
 <dd>the value of the <code>predefinedAppImage</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="installedPackageLayout()">
+<h3>installedPackageLayout</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppImageLayout.html" title="interface in jdk.jpackage.internal.model">AppImageLayout</a></span>&nbsp;<span class="element-name">installedPackageLayout</span>()</div>
+<div class="block">Returns the value of the <code>installedPackageLayout</code> record component.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Package.html#installedPackageLayout()">installedPackageLayout</a></code>&nbsp;in interface&nbsp;<code><a href="Package.html" title="interface in jdk.jpackage.internal.model">Package</a></code></dd>
+<dt>Returns:</dt>
+<dd>the value of the <code>installedPackageLayout</code> record component</dd>
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="Package.html#appImageLayout()"><code>Package.appImageLayout()</code></a></li>
+</ul>
+</dd>
 </dl>
 </div>
 </section>

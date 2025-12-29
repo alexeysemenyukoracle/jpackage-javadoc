@@ -178,7 +178,7 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#extraAppImageFileData()" class="member-name-link">extraAppImageFileData</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Gets the additional properties for application launcher entries in the app
- image (".jpackage") file.</div>
+ image (".jpackage.xml") file.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="FileAssociation.html" title="interface in jdk.jpackage.internal.model">FileAssociation</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#fileAssociations()" class="member-name-link">fileAssociations</a>()</code></div>
@@ -188,7 +188,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#hasCustomIcon()" class="member-name-link">hasCustomIcon</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
-<div class="block">Returns <code>true</code> if this launcher has a custom icon.</div>
+<div class="block">Returns <code>true</code> if this launcher has non-default icon.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#hasDefaultIcon()" class="member-name-link">hasDefaultIcon</a>()</code></div>
@@ -430,10 +430,12 @@ loadScripts(document, 'script');</script>
 <h3>hasCustomIcon</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasCustomIcon</span>()</div>
-<div class="block">Returns <code>true</code> if this launcher has a custom icon.</div>
+<div class="block">Returns <code>true</code> if this launcher has non-default icon.
+ <p>
+ A custom icon can be sourced from an external file or from the resource directory.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd><code>true</code> if this launcher has a custom icon</dd>
+<dd><code>true</code> if this launcher has non-default icon</dd>
 <dt>See Also:</dt>
 <dd>
 <ul class="tag-list">
@@ -467,11 +469,11 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">extraAppImageFileData</span>()</div>
 <div class="block">Gets the additional properties for application launcher entries in the app
- image (".jpackage") file.</div>
+ image (".jpackage.xml") file.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the additional properties for application launcher entries in
-         ".jpackage" file</dd>
+         ".jpackage.xml" file</dd>
 </dl>
 </div>
 </section>

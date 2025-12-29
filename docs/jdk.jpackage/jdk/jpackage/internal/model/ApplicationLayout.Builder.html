@@ -68,7 +68,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#create()" tabindex="0">create()</a></li>
 <li><a href="#setAll(java.lang.String)" tabindex="0">setAll(String)</a></li>
 <li><a href="#setAll(java.nio.file.Path)" tabindex="0">setAll(Path)</a></li>
-<li><a href="#resolveAt(java.nio.file.Path)" tabindex="0">resolveAt(Path)</a></li>
+<li><a href="#mutate(java.util.function.UnaryOperator)" tabindex="0">mutate(UnaryOperator)</a></li>
 <li><a href="#rootDirectory(java.lang.String)" tabindex="0">rootDirectory(String)</a></li>
 <li><a href="#rootDirectory(java.nio.file.Path)" tabindex="0">rootDirectory(Path)</a></li>
 <li><a href="#launchersDirectory(java.lang.String)" tabindex="0">launchersDirectory(String)</a></li>
@@ -79,8 +79,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#runtimeDirectory(java.nio.file.Path)" tabindex="0">runtimeDirectory(Path)</a></li>
 <li><a href="#appModsDirectory(java.lang.String)" tabindex="0">appModsDirectory(String)</a></li>
 <li><a href="#appModsDirectory(java.nio.file.Path)" tabindex="0">appModsDirectory(Path)</a></li>
-<li><a href="#destktopIntegrationDirectory(java.lang.String)" tabindex="0">destktopIntegrationDirectory(String)</a></li>
-<li><a href="#destktopIntegrationDirectory(java.nio.file.Path)" tabindex="0">destktopIntegrationDirectory(Path)</a></li>
+<li><a href="#desktopIntegrationDirectory(java.lang.String)" tabindex="0">desktopIntegrationDirectory(String)</a></li>
+<li><a href="#desktopIntegrationDirectory(java.nio.file.Path)" tabindex="0">desktopIntegrationDirectory(Path)</a></li>
 <li><a href="#contentDirectory(java.lang.String)" tabindex="0">contentDirectory(String)</a></li>
 <li><a href="#contentDirectory(java.nio.file.Path)" tabindex="0">contentDirectory(Path)</a></li>
 </ol>
@@ -142,10 +142,10 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#create()" class="member-name-link">create</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApplicationLayout.Builder.html" title="class in jdk.jpackage.internal.model">ApplicationLayout.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#destktopIntegrationDirectory(java.lang.String)" class="member-name-link">destktopIntegrationDirectory</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;v)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#desktopIntegrationDirectory(java.lang.String)" class="member-name-link">desktopIntegrationDirectory</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;v)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApplicationLayout.Builder.html" title="class in jdk.jpackage.internal.model">ApplicationLayout.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#destktopIntegrationDirectory(java.nio.file.Path)" class="member-name-link">destktopIntegrationDirectory</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;v)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#desktopIntegrationDirectory(java.nio.file.Path)" class="member-name-link">desktopIntegrationDirectory</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;v)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApplicationLayout.Builder.html" title="class in jdk.jpackage.internal.model">ApplicationLayout.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#launchersDirectory(java.lang.String)" class="member-name-link">launchersDirectory</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;v)</code></div>
@@ -154,7 +154,7 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#launchersDirectory(java.nio.file.Path)" class="member-name-link">launchersDirectory</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;v)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApplicationLayout.Builder.html" title="class in jdk.jpackage.internal.model">ApplicationLayout.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resolveAt(java.nio.file.Path)" class="member-name-link">resolveAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;base)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mutate(java.util.function.UnaryOperator)" class="member-name-link">mutate</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/function/UnaryOperator.html" title="class or interface in java.util.function" class="external-link">UnaryOperator</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&gt;&nbsp;mapper)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApplicationLayout.Builder.html" title="class in jdk.jpackage.internal.model">ApplicationLayout.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#rootDirectory(java.lang.String)" class="member-name-link">rootDirectory</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;v)</code></div>
@@ -216,10 +216,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="resolveAt(java.nio.file.Path)">
-<h3>resolveAt</h3>
+<section class="detail" id="mutate(java.util.function.UnaryOperator)">
+<h3>mutate</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApplicationLayout.Builder.html" title="class in jdk.jpackage.internal.model">ApplicationLayout.Builder</a></span>&nbsp;<span class="element-name">resolveAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;base)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApplicationLayout.Builder.html" title="class in jdk.jpackage.internal.model">ApplicationLayout.Builder</a></span>&nbsp;<span class="element-name">mutate</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/function/UnaryOperator.html" title="class or interface in java.util.function" class="external-link">UnaryOperator</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&gt;&nbsp;mapper)</span></div>
 </div>
 </section>
 </li>
@@ -304,18 +304,18 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="destktopIntegrationDirectory(java.lang.String)">
-<h3>destktopIntegrationDirectory</h3>
+<section class="detail" id="desktopIntegrationDirectory(java.lang.String)">
+<h3>desktopIntegrationDirectory</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApplicationLayout.Builder.html" title="class in jdk.jpackage.internal.model">ApplicationLayout.Builder</a></span>&nbsp;<span class="element-name">destktopIntegrationDirectory</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;v)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApplicationLayout.Builder.html" title="class in jdk.jpackage.internal.model">ApplicationLayout.Builder</a></span>&nbsp;<span class="element-name">desktopIntegrationDirectory</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;v)</span></div>
 </div>
 </section>
 </li>
 <li>
-<section class="detail" id="destktopIntegrationDirectory(java.nio.file.Path)">
-<h3>destktopIntegrationDirectory</h3>
+<section class="detail" id="desktopIntegrationDirectory(java.nio.file.Path)">
+<h3>desktopIntegrationDirectory</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApplicationLayout.Builder.html" title="class in jdk.jpackage.internal.model">ApplicationLayout.Builder</a></span>&nbsp;<span class="element-name">destktopIntegrationDirectory</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;v)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApplicationLayout.Builder.html" title="class in jdk.jpackage.internal.model">ApplicationLayout.Builder</a></span>&nbsp;<span class="element-name">desktopIntegrationDirectory</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;v)</span></div>
 </div>
 </section>
 </li>

@@ -88,12 +88,14 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><a href="../package-summary.html">jdk.jpackage.internal</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="../pipeline/package-summary.html">jdk.jpackage.internal.pipeline</a></div>
+<div class="col-first odd-row-color"><a href="../cli/package-summary.html">jdk.jpackage.internal.cli</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><a href="../resources/package-summary.html">jdk.jpackage.internal.resources</a></div>
+<div class="col-first even-row-color"><a href="../pipeline/package-summary.html">jdk.jpackage.internal.pipeline</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="../util/package-summary.html">jdk.jpackage.internal.util</a></div>
+<div class="col-first odd-row-color"><a href="../resources/package-summary.html">jdk.jpackage.internal.resources</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><a href="../util/package-summary.html">jdk.jpackage.internal.util</a></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 </div>
 </li>
@@ -148,9 +150,17 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color class-summary class-summary-tab4">
 <div class="block">Default implementation of <a href="ApplicationLayoutMixin.html" title="interface in jdk.jpackage.internal.model"><code>ApplicationLayoutMixin</code></a> interface.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="ApplicationWriter.html" title="interface in jdk.jpackage.internal.model">ApplicationWriter</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="BundleSpec.html" title="interface in jdk.jpackage.internal.model">BundleSpec</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">Creates app image directory from the given <a href="Application.html" title="interface in jdk.jpackage.internal.model"><code>Application</code></a> object.</div>
+<div class="block">A generic bundle specification.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="BundlingEnvironment.html" title="interface in jdk.jpackage.internal.model">BundlingEnvironment</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">Bundling environment.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="BundlingOperationDescriptor.html" title="class in jdk.jpackage.internal.model">BundlingOperationDescriptor</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab4">
+<div class="block">Descriptor of a generic bundling operation.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab5"><a href="ConfigException.html" title="class in jdk.jpackage.internal.model">ConfigException</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab5">
@@ -162,7 +172,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="CustomLauncherIcon.html" title="interface in jdk.jpackage.internal.model">CustomLauncherIcon</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
-<div class="block">Custom application launcher icon.</div>
+<div class="block">Custom application launcher icon sourced from an external file.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab4"><a href="CustomLauncherIcon.Stub.html" title="class in jdk.jpackage.internal.model">CustomLauncherIcon.Stub</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab4">
@@ -172,9 +182,21 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
 <div class="block">Default application launcher icon.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="DottedVersion.html" title="class in jdk.jpackage.internal.model">DottedVersion</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="DefaultLauncherIcon.Details.html" title="class in jdk.jpackage.internal.model">DefaultLauncherIcon.Details</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="DottedVersion.html" title="class in jdk.jpackage.internal.model">DottedVersion</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">Dotted numeric version string.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="ExternalApplication.html" title="interface in jdk.jpackage.internal.model">ExternalApplication</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">Description of an external application image.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ExternalApplication.Internal.html" title="class in jdk.jpackage.internal.model">ExternalApplication.Internal</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="ExternalApplication.LauncherInfo.html" title="interface in jdk.jpackage.internal.model">ExternalApplication.LauncherInfo</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">Launcher description.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="FileAssociation.html" title="interface in jdk.jpackage.internal.model">FileAssociation</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
@@ -184,162 +206,179 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color class-summary class-summary-tab4">
 <div class="block">Default implementation of <a href="FileAssociation.html" title="interface in jdk.jpackage.internal.model"><code>FileAssociation</code></a> interface</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="Launcher.html" title="interface in jdk.jpackage.internal.model">Launcher</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="col-first odd-row-color class-summary class-summary-tab5"><a href="JPackageException.html" title="class in jdk.jpackage.internal.model">JPackageException</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab5">
+<div class="block">Generic jpackage exception with non-null message.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="Launcher.html" title="interface in jdk.jpackage.internal.model">Launcher</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
 <div class="block">Application launcher.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab4"><a href="Launcher.Stub.html" title="class in jdk.jpackage.internal.model">Launcher.Stub</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab4">
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="Launcher.Stub.html" title="class in jdk.jpackage.internal.model">Launcher.Stub</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab4">
 <div class="block">Default implementation of <a href="Launcher.html" title="interface in jdk.jpackage.internal.model"><code>Launcher</code></a> interface.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="LauncherIcon.html" title="interface in jdk.jpackage.internal.model">LauncherIcon</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="LauncherIcon.html" title="interface in jdk.jpackage.internal.model">LauncherIcon</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
 <div class="block">Application launcher icon.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="LauncherJarStartupInfo.html" title="interface in jdk.jpackage.internal.model">LauncherJarStartupInfo</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="LauncherJarStartupInfo.html" title="interface in jdk.jpackage.internal.model">LauncherJarStartupInfo</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
 <div class="block">Application launcher startup configuration using non-modular jar file.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="LauncherJarStartupInfoMixin.html" title="interface in jdk.jpackage.internal.model">LauncherJarStartupInfoMixin</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="LauncherJarStartupInfoMixin.html" title="interface in jdk.jpackage.internal.model">LauncherJarStartupInfoMixin</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
 <div class="block">Details of Linux application launcher startup configuration using non-modular jar file.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab4"><a href="LauncherJarStartupInfoMixin.Stub.html" title="class in jdk.jpackage.internal.model">LauncherJarStartupInfoMixin.Stub</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab4">
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="LauncherJarStartupInfoMixin.Stub.html" title="class in jdk.jpackage.internal.model">LauncherJarStartupInfoMixin.Stub</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab4">
 <div class="block">Default implementation of <a href="LauncherJarStartupInfoMixin.html" title="interface in jdk.jpackage.internal.model"><code>LauncherJarStartupInfoMixin</code></a> interface.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="LauncherModularStartupInfo.html" title="interface in jdk.jpackage.internal.model">LauncherModularStartupInfo</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="LauncherModularStartupInfo.html" title="interface in jdk.jpackage.internal.model">LauncherModularStartupInfo</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
 <div class="block">Application launcher startup configuration using Java module.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="LauncherModularStartupInfoMixin.html" title="interface in jdk.jpackage.internal.model">LauncherModularStartupInfoMixin</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="LauncherModularStartupInfoMixin.html" title="interface in jdk.jpackage.internal.model">LauncherModularStartupInfoMixin</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
 <div class="block">Details of application launcher startup configuration using Java module.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="LauncherModularStartupInfoMixin.Stub.html" title="class in jdk.jpackage.internal.model">LauncherModularStartupInfoMixin.Stub</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab4">
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="LauncherModularStartupInfoMixin.Stub.html" title="class in jdk.jpackage.internal.model">LauncherModularStartupInfoMixin.Stub</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab4">
 <div class="block">Default implementation of <a href="LauncherModularStartupInfoMixin.html" title="interface in jdk.jpackage.internal.model"><code>LauncherModularStartupInfoMixin</code></a> interface.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="LauncherStartupInfo.html" title="interface in jdk.jpackage.internal.model">LauncherStartupInfo</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="LauncherShortcut.html" title="class in jdk.jpackage.internal.model">LauncherShortcut</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab4">
+<div class="block">A shortcut to launch an application launcher.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab3"><a href="LauncherShortcutStartupDirectory.html" title="enum class in jdk.jpackage.internal.model">LauncherShortcutStartupDirectory</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab3">
+<div class="block">The directory in which to run an application launcher when it is started from
+ a shortcut.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="LauncherStartupInfo.html" title="interface in jdk.jpackage.internal.model">LauncherStartupInfo</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
 <div class="block">Generic startup configuration of an application launcher.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="LauncherStartupInfo.Stub.html" title="class in jdk.jpackage.internal.model">LauncherStartupInfo.Stub</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab4">
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="LauncherStartupInfo.Stub.html" title="class in jdk.jpackage.internal.model">LauncherStartupInfo.Stub</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab4">
 <div class="block">Default implementation of <a href="LauncherStartupInfo.html" title="interface in jdk.jpackage.internal.model"><code>LauncherStartupInfo</code></a> interface.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="LinuxApplication.html" title="interface in jdk.jpackage.internal.model">LinuxApplication</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="LinuxApplication.html" title="interface in jdk.jpackage.internal.model">LinuxApplication</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
 <div class="block">Linux application.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="LinuxDebPackage.html" title="interface in jdk.jpackage.internal.model">LinuxDebPackage</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="LinuxDebPackage.html" title="interface in jdk.jpackage.internal.model">LinuxDebPackage</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
 <div class="block">Linux DEB package.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="LinuxDebPackageMixin.html" title="interface in jdk.jpackage.internal.model">LinuxDebPackageMixin</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="LinuxDebPackageMixin.html" title="interface in jdk.jpackage.internal.model">LinuxDebPackageMixin</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
 <div class="block">Details of Linux DEB package.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="LinuxDebPackageMixin.Stub.html" title="class in jdk.jpackage.internal.model">LinuxDebPackageMixin.Stub</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab4">
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="LinuxDebPackageMixin.Stub.html" title="class in jdk.jpackage.internal.model">LinuxDebPackageMixin.Stub</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab4">
 <div class="block">Default implementation of <a href="LinuxDebPackageMixin.html" title="interface in jdk.jpackage.internal.model"><code>LinuxDebPackageMixin</code></a> interface.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="LinuxLauncher.html" title="interface in jdk.jpackage.internal.model">LinuxLauncher</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="LinuxLauncher.html" title="interface in jdk.jpackage.internal.model">LinuxLauncher</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
 <div class="block">Linux application launcher.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="LinuxLauncherMixin.html" title="interface in jdk.jpackage.internal.model">LinuxLauncherMixin</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="LinuxLauncherMixin.html" title="interface in jdk.jpackage.internal.model">LinuxLauncherMixin</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
 <div class="block">Details of Linux application launcher.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab4"><a href="LinuxLauncherMixin.Stub.html" title="class in jdk.jpackage.internal.model">LinuxLauncherMixin.Stub</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab4">
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="LinuxLauncherMixin.Stub.html" title="class in jdk.jpackage.internal.model">LinuxLauncherMixin.Stub</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab4">
 <div class="block">Default implementation of <a href="LinuxLauncherMixin.html" title="interface in jdk.jpackage.internal.model"><code>LinuxLauncherMixin</code></a> interface.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="LinuxPackage.html" title="interface in jdk.jpackage.internal.model">LinuxPackage</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="LinuxPackage.html" title="interface in jdk.jpackage.internal.model">LinuxPackage</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
 <div class="block">Linux package.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="LinuxPackageMixin.html" title="interface in jdk.jpackage.internal.model">LinuxPackageMixin</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="LinuxPackageMixin.html" title="interface in jdk.jpackage.internal.model">LinuxPackageMixin</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
 <div class="block">Details of Linux package.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="LinuxPackageMixin.Stub.html" title="class in jdk.jpackage.internal.model">LinuxPackageMixin.Stub</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab4">
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="LinuxPackageMixin.Stub.html" title="class in jdk.jpackage.internal.model">LinuxPackageMixin.Stub</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab4">
 <div class="block">Default implementation of <a href="LinuxPackageMixin.html" title="interface in jdk.jpackage.internal.model"><code>LinuxPackageMixin</code></a> interface.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="LinuxRpmPackage.html" title="interface in jdk.jpackage.internal.model">LinuxRpmPackage</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="LinuxRpmPackage.html" title="interface in jdk.jpackage.internal.model">LinuxRpmPackage</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
 <div class="block">Linux RPM package.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="LinuxRpmPackageMixin.html" title="interface in jdk.jpackage.internal.model">LinuxRpmPackageMixin</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="LinuxRpmPackageMixin.html" title="interface in jdk.jpackage.internal.model">LinuxRpmPackageMixin</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
 <div class="block">Details of Linux RPM package.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab4"><a href="LinuxRpmPackageMixin.Stub.html" title="class in jdk.jpackage.internal.model">LinuxRpmPackageMixin.Stub</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab4">
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="LinuxRpmPackageMixin.Stub.html" title="class in jdk.jpackage.internal.model">LinuxRpmPackageMixin.Stub</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab4">
 <div class="block">Default implementation of <a href="LinuxRpmPackageMixin.html" title="interface in jdk.jpackage.internal.model"><code>LinuxRpmPackageMixin</code></a> interface.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="MacApplication.html" title="interface in jdk.jpackage.internal.model">MacApplication</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab3"><a href="MacApplication.ExtraAppImageFileField.html" title="enum class in jdk.jpackage.internal.model">MacApplication.ExtraAppImageFileField</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab3">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="MacApplicationMixin.html" title="interface in jdk.jpackage.internal.model">MacApplicationMixin</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab4"><a href="MacApplicationMixin.Stub.html" title="class in jdk.jpackage.internal.model">MacApplicationMixin.Stub</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="MacDmgPackage.html" title="interface in jdk.jpackage.internal.model">MacDmgPackage</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="MacDmgPackageMixin.html" title="interface in jdk.jpackage.internal.model">MacDmgPackageMixin</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="MacApplication.html" title="interface in jdk.jpackage.internal.model">MacApplication</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="MacDmgPackageMixin.Stub.html" title="class in jdk.jpackage.internal.model">MacDmgPackageMixin.Stub</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab3"><a href="MacApplication.ExtraAppImageFileField.html" title="enum class in jdk.jpackage.internal.model">MacApplication.ExtraAppImageFileField</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab3">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="MacApplicationMixin.html" title="interface in jdk.jpackage.internal.model">MacApplicationMixin</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="MacApplicationMixin.Stub.html" title="class in jdk.jpackage.internal.model">MacApplicationMixin.Stub</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab4">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="MacFileAssociation.html" title="interface in jdk.jpackage.internal.model">MacFileAssociation</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="MacDmgPackage.html" title="interface in jdk.jpackage.internal.model">MacDmgPackage</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="MacFileAssociationMixin.html" title="interface in jdk.jpackage.internal.model">MacFileAssociationMixin</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="MacDmgPackageMixin.html" title="interface in jdk.jpackage.internal.model">MacDmgPackageMixin</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab4"><a href="MacFileAssociationMixin.Stub.html" title="class in jdk.jpackage.internal.model">MacFileAssociationMixin.Stub</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="MacDmgPackageMixin.Stub.html" title="class in jdk.jpackage.internal.model">MacDmgPackageMixin.Stub</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="MacLauncher.html" title="interface in jdk.jpackage.internal.model">MacLauncher</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="MacFileAssociation.html" title="interface in jdk.jpackage.internal.model">MacFileAssociation</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="MacPackage.html" title="interface in jdk.jpackage.internal.model">MacPackage</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="MacFileAssociationMixin.html" title="interface in jdk.jpackage.internal.model">MacFileAssociationMixin</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="MacPackageMixin.html" title="interface in jdk.jpackage.internal.model">MacPackageMixin</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab4"><a href="MacPackageMixin.Stub.html" title="class in jdk.jpackage.internal.model">MacPackageMixin.Stub</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="MacPkgPackage.html" title="interface in jdk.jpackage.internal.model">MacPkgPackage</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="MacPkgPackageMixin.html" title="interface in jdk.jpackage.internal.model">MacPkgPackageMixin</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab1">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="MacPkgPackageMixin.Stub.html" title="class in jdk.jpackage.internal.model">MacPkgPackageMixin.Stub</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="MacFileAssociationMixin.Stub.html" title="class in jdk.jpackage.internal.model">MacFileAssociationMixin.Stub</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab4">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="MsiVersion.html" title="class in jdk.jpackage.internal.model">MsiVersion</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="Package.html" title="interface in jdk.jpackage.internal.model">Package</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="MacLauncher.html" title="interface in jdk.jpackage.internal.model">MacLauncher</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="MacPackage.html" title="interface in jdk.jpackage.internal.model">MacPackage</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="MacPackageMixin.html" title="interface in jdk.jpackage.internal.model">MacPackageMixin</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="MacPackageMixin.Stub.html" title="class in jdk.jpackage.internal.model">MacPackageMixin.Stub</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab4">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="MacPkgPackage.html" title="interface in jdk.jpackage.internal.model">MacPkgPackage</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="MacPkgPackageMixin.html" title="interface in jdk.jpackage.internal.model">MacPkgPackageMixin</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab4"><a href="MacPkgPackageMixin.Stub.html" title="class in jdk.jpackage.internal.model">MacPkgPackageMixin.Stub</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="MsiVersion.html" title="class in jdk.jpackage.internal.model">MsiVersion</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="Package.html" title="interface in jdk.jpackage.internal.model">Package</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
 <div class="block">Native application package.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab4"><a href="Package.Stub.html" title="class in jdk.jpackage.internal.model">Package.Stub</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab4">
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="Package.Stub.html" title="class in jdk.jpackage.internal.model">Package.Stub</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab4">
 <div class="block">Default implementation of <a href="Package.html" title="interface in jdk.jpackage.internal.model"><code>Package</code></a> interface.</div>
-</div>
-<div class="col-first odd-row-color class-summary class-summary-tab5"><a href="PackagerException.html" title="class in jdk.jpackage.internal.model">PackagerException</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab5">
-<div class="block">Signals that error has occurred at packaging phase.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="PackageType.html" title="interface in jdk.jpackage.internal.model">PackageType</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
 <div class="block">Generic package type.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="PackageWriter.html" title="interface in jdk.jpackage.internal.model">PackageWriter</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab1">
-<div class="block">Creates native package from the given <a href="Package.html" title="interface in jdk.jpackage.internal.model"><code>Package</code></a> object.</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ParseUtils.html" title="class in jdk.jpackage.internal.model">ParseUtils</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">Collection of functions to create instances of types defined in this package from strings.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="PkgSigningConfig.html" title="interface in jdk.jpackage.internal.model">PkgSigningConfig</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">&nbsp;</div>
 <div class="col-first odd-row-color class-summary class-summary-tab4"><a href="PkgSigningConfig.Stub.html" title="class in jdk.jpackage.internal.model">PkgSigningConfig.Stub</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab4">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="ResourceDirLauncherIcon.html" title="interface in jdk.jpackage.internal.model">ResourceDirLauncherIcon</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">Custom application launcher icon sourced from the resource directory.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="ResourceDirLauncherIcon.Stub.html" title="class in jdk.jpackage.internal.model">ResourceDirLauncherIcon.Stub</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab4">
+<div class="block">Default implementation of <a href="ResourceDirLauncherIcon.html" title="interface in jdk.jpackage.internal.model"><code>ResourceDirLauncherIcon</code></a> type.</div>
+</div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="RuntimeBuilder.html" title="interface in jdk.jpackage.internal.model">RuntimeBuilder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
 <div class="block">Creates Java runtime.</div>
@@ -372,14 +411,12 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
 <div class="col-first even-row-color class-summary class-summary-tab4"><a href="WinLauncherMixin.Stub.html" title="class in jdk.jpackage.internal.model">WinLauncherMixin.Stub</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab3"><a href="WinLauncherMixin.WinShortcut.html" title="enum class in jdk.jpackage.internal.model">WinLauncherMixin.WinShortcut</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab3">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="WinMsiPackage.html" title="interface in jdk.jpackage.internal.model">WinMsiPackage</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab1">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="WinMsiPackageMixin.html" title="interface in jdk.jpackage.internal.model">WinMsiPackageMixin</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="WinMsiPackage.html" title="interface in jdk.jpackage.internal.model">WinMsiPackage</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab4"><a href="WinMsiPackageMixin.Stub.html" title="class in jdk.jpackage.internal.model">WinMsiPackageMixin.Stub</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab4">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="WinMsiPackageMixin.html" title="interface in jdk.jpackage.internal.model">WinMsiPackageMixin</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab4"><a href="WinMsiPackageMixin.Stub.html" title="class in jdk.jpackage.internal.model">WinMsiPackageMixin.Stub</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab4">&nbsp;</div>
 </div>
 </div>
 </div>

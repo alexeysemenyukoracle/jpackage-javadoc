@@ -88,9 +88,10 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CustomLauncherIcon.Stub.html" title="class in jdk.jpackage.internal.model">CustomLauncherIcon.Stub</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">CustomLauncherIcon</span><span class="extends-implements">
-extends <a href="LauncherIcon.html" title="interface in jdk.jpackage.internal.model">LauncherIcon</a></span></div>
-<div class="block">Custom application launcher icon.
+<div class="type-signature"><span class="modifiers">public sealed interface </span><span class="element-name type-name-label">CustomLauncherIcon</span><span class="extends-implements">
+extends <a href="LauncherIcon.html" title="interface in jdk.jpackage.internal.model">LauncherIcon</a></span>
+<span class="permits">permits <a href="CustomLauncherIcon.Stub.html" title="class in jdk.jpackage.internal.model">CustomLauncherIcon.Stub</a></span></div>
+<div class="block">Custom application launcher icon sourced from an external file.
  <p>
  Use <a href="#create(java.nio.file.Path)"><code>create(Path)</code></a> method to create an instance of this type.</div>
 </div>

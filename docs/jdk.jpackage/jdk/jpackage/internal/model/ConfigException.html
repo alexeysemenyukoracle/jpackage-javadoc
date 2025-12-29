@@ -68,7 +68,7 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#%3Cinit%3E(java.lang.String,java.lang.String)" tabindex="0">ConfigException(String, String)</a></li>
 <li><a href="#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.Throwable)" tabindex="0">ConfigException(String, String, Throwable)</a></li>
-<li><a href="#%3Cinit%3E(java.lang.Throwable)" tabindex="0">ConfigException(Throwable)</a></li>
+<li><a href="#%3Cinit%3E(java.lang.String,java.lang.Throwable)" tabindex="0">ConfigException(String, Throwable)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -77,7 +77,6 @@ loadScripts(document, 'script');</script>
 <li><a href="#build(jdk.jpackage.internal.util.StringBundle)" tabindex="0">build(StringBundle)</a></li>
 <li><a href="#build(jdk.jpackage.internal.util.StringBundle,java.lang.String,java.lang.Object...)" tabindex="0">build(StringBundle, String, Object...)</a></li>
 <li><a href="#build(jdk.jpackage.internal.util.StringBundle,java.lang.Throwable)" tabindex="0">build(StringBundle, Throwable)</a></li>
-<li><a href="#rethrowConfigException(java.lang.RuntimeException)" tabindex="0">rethrowConfigException(RuntimeException)</a></li>
 </ol>
 </li>
 </ol>
@@ -90,7 +89,11 @@ loadScripts(document, 'script');</script>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">java.lang.Throwable</a>
 <div class="inheritance"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">java.lang.Exception</a>
+<div class="inheritance"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">java.lang.RuntimeException</a>
+<div class="inheritance"><a href="JPackageException.html" title="class in jdk.jpackage.internal.model">jdk.jpackage.internal.model.JPackageException</a>
 <div class="inheritance">jdk.jpackage.internal.model.ConfigException</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -102,7 +105,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ConfigException</span>
-<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></span></div>
+<span class="extends-implements">extends <a href="JPackageException.html" title="class in jdk.jpackage.internal.model">JPackageException</a></span></div>
 <div class="block">Signals that error has occurred at configuration phase.
  <p>
  It contains an error message and an optional advice message on how to correct the error.
@@ -166,7 +169,8 @@ throw ConfigException.build(i18n)
  <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;advice,
  <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&nbsp;cause)</code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.Throwable)" class="member-name-link">ConfigException</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&nbsp;cause)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String,java.lang.Throwable)" class="member-name-link">ConfigException</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;msg,
+ <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&nbsp;cause)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
@@ -197,13 +201,6 @@ throw ConfigException.build(i18n)
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAdvice()" class="member-name-link">getAdvice</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#rethrowConfigException(java.lang.RuntimeException)" class="member-name-link">rethrowConfigException</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&nbsp;ex)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Throws the cause of the given <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link"><code>RuntimeException</code></a> exception
- as <a href="ConfigException.html" title="class in jdk.jpackage.internal.model"><code>ConfigException</code></a> if the cause is of this type or re-throws the given
- <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link"><code>RuntimeException</code></a> exception as-is otherwise.</div>
-</div>
 </div>
 </div>
 </div>
@@ -244,10 +241,11 @@ throw ConfigException.build(i18n)
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(java.lang.Throwable)">
+<section class="detail" id="&lt;init&gt;(java.lang.String,java.lang.Throwable)">
 <h3>ConfigException</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ConfigException</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&nbsp;cause)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ConfigException</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;msg,
+ <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&nbsp;cause)</span></div>
 </div>
 </section>
 </li>
@@ -291,28 +289,6 @@ throw ConfigException.build(i18n)
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ConfigException.Builder.html" title="class in jdk.jpackage.internal.model">ConfigException.Builder</a></span>&nbsp;<span class="element-name">build</span><wbr><span class="parameters">(<a href="../util/StringBundle.html" title="interface in jdk.jpackage.internal.util">StringBundle</a>&nbsp;i18n,
  <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&nbsp;t)</span></div>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="rethrowConfigException(java.lang.RuntimeException)">
-<h3>rethrowConfigException</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a></span>&nbsp;<span class="element-name">rethrowConfigException</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&nbsp;ex)</span>
-                                               throws <span class="exceptions"><a href="ConfigException.html" title="class in jdk.jpackage.internal.model">ConfigException</a></span></div>
-<div class="block">Throws the cause of the given <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link"><code>RuntimeException</code></a> exception
- as <a href="ConfigException.html" title="class in jdk.jpackage.internal.model"><code>ConfigException</code></a> if the cause is of this type or re-throws the given
- <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link"><code>RuntimeException</code></a> exception as-is otherwise.
- <p>
- Never return a value. It always throws some exception object.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>ex</code> - exception to re-throw</dd>
-<dt>Returns:</dt>
-<dd>doesn't return value</dd>
-<dt>Throws:</dt>
-<dd><code><a href="ConfigException.html" title="class in jdk.jpackage.internal.model">ConfigException</a></code></dd>
-</dl>
 </div>
 </section>
 </li>

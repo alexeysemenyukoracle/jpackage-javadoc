@@ -79,12 +79,6 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Since:</dt>
 <dd>16</dd>
-<dt>Implementation Note:</dt>
-<dd>The <code>jpackage</code> tool is not thread-safe. An application
- should not call either of the
- <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/spi/ToolProvider.html" title="class or interface in java.util.spi" class="external-link"><code>ToolProvider</code></a> <code>run</code> methods
- concurrently, even with separate <code>"jpackage"</code> <code>ToolProvider</code>
- instances, or undefined behavior may result.</dd>
 <dt>Module Graph:</dt>
 </dl>
 </section>

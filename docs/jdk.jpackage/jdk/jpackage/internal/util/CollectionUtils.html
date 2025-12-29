@@ -72,7 +72,6 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#toCollection(java.util.Collection)" tabindex="0">toCollection(Collection)</a></li>
 <li><a href="#toCollectionUBW(java.util.Collection)" tabindex="0">toCollectionUBW(Collection)</a></li>
-<li><a href="#toSet(java.util.Collection)" tabindex="0">toSet(Collection)</a></li>
 </ol>
 </li>
 </ol>
@@ -132,11 +131,6 @@ C extends <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#toCollectionUBW(java.util.Collection)" class="member-name-link">toCollectionUBW</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;? extends B&gt;&nbsp;v)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Casts the given collection to the requested upper bounded wildcard (UBW) type.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static &lt;T&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#toSet(java.util.Collection)" class="member-name-link">toSet</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;T&gt;&nbsp;col)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Converts the given collection to <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link"><code>Set</code></a>.</div>
 </div>
 </div>
 </div>
@@ -211,24 +205,6 @@ C extends <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/
 <dd><code>v</code> - the input collection. Null is permitted.</dd>
 <dt>Returns:</dt>
 <dd>the input collection cast to the requested type</dd>
-</dl>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="toSet(java.util.Collection)">
-<h3>toSet</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;T&gt;</span>&nbsp;<span class="element-name">toSet</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;T&gt;&nbsp;col)</span></div>
-<div class="block">Converts the given collection to <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link"><code>Set</code></a>.</div>
-<dl class="notes">
-<dt>Type Parameters:</dt>
-<dd><code>T</code> - the type of elements in this output collection</dd>
-<dt>Parameters:</dt>
-<dd><code>col</code> - the input collection. Null is permitted.</dd>
-<dt>Returns:</dt>
-<dd>the input collection if it is of type <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link"><code>Set</code></a> or a new
-         <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link"><code>Set</code></a> instance created from the input collection</dd>
 </dl>
 </div>
 </section>

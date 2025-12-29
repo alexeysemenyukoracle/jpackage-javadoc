@@ -73,7 +73,11 @@ loadScripts(document, 'script');</script>
 <ol class="toc-list">
 <li><a href="#toXmlConsumer(jdk.jpackage.internal.util.XmlUtils.XmlConsumerNoArg)" tabindex="0">toXmlConsumer(XmlUtils.XmlConsumerNoArg)</a></li>
 <li><a href="#createXml(java.nio.file.Path,jdk.jpackage.internal.util.XmlConsumer)" tabindex="0">createXml(Path, XmlConsumer)</a></li>
-<li><a href="#mergeXmls(javax.xml.stream.XMLStreamWriter,java.util.Collection)" tabindex="0">mergeXmls(XMLStreamWriter, Collection)</a></li>
+<li><a href="#createXml(org.w3c.dom.Node,jdk.jpackage.internal.util.XmlConsumer)" tabindex="0">createXml(Node, XmlConsumer)</a></li>
+<li><a href="#createXml(jdk.jpackage.internal.util.XmlConsumer)" tabindex="0">createXml(XmlConsumer)</a></li>
+<li><a href="#createXml(javax.xml.transform.dom.DOMResult,jdk.jpackage.internal.util.XmlConsumer)" tabindex="0">createXml(DOMResult, XmlConsumer)</a></li>
+<li><a href="#concatXml(javax.xml.stream.XMLStreamWriter,javax.xml.transform.Source...)" tabindex="0">concatXml(XMLStreamWriter, Source...)</a></li>
+<li><a href="#concatXml(javax.xml.stream.XMLStreamWriter,java.lang.Iterable)" tabindex="0">concatXml(XMLStreamWriter, Iterable)</a></li>
 <li><a href="#initDocumentBuilder()" tabindex="0">initDocumentBuilder()</a></li>
 <li><a href="#initDocumentBuilderFactory()" tabindex="0">initDocumentBuilderFactory()</a></li>
 <li><a href="#queryNodes(org.w3c.dom.Node,javax.xml.xpath.XPath,java.lang.String)" tabindex="0">queryNodes(Node, XPath, String)</a></li>
@@ -140,18 +144,33 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#concatXml(javax.xml.stream.XMLStreamWriter,java.lang.Iterable)" class="member-name-link">concatXml</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/javax/xml/stream/XMLStreamWriter.html" title="class or interface in javax.xml.stream" class="external-link">XMLStreamWriter</a>&nbsp;xml,
+ <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/javax/xml/transform/Source.html" title="class or interface in javax.xml.transform" class="external-link">Source</a>&gt;&nbsp;sources)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#concatXml(javax.xml.stream.XMLStreamWriter,javax.xml.transform.Source...)" class="member-name-link">concatXml</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/javax/xml/stream/XMLStreamWriter.html" title="class or interface in javax.xml.stream" class="external-link">XMLStreamWriter</a>&nbsp;xml,
+ <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/javax/xml/transform/Source.html" title="class or interface in javax.xml.transform" class="external-link">Source</a>...&nbsp;sources)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createXml(java.nio.file.Path,jdk.jpackage.internal.util.XmlConsumer)" class="member-name-link">createXml</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;dstFile,
  <a href="XmlConsumer.html" title="interface in jdk.jpackage.internal.util">XmlConsumer</a>&nbsp;xmlConsumer)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/javax/xml/parsers/DocumentBuilder.html" title="class or interface in javax.xml.parsers" class="external-link">DocumentBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#initDocumentBuilder()" class="member-name-link">initDocumentBuilder</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createXml(javax.xml.transform.dom.DOMResult,jdk.jpackage.internal.util.XmlConsumer)" class="member-name-link">createXml</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/javax/xml/transform/dom/DOMResult.html" title="class or interface in javax.xml.transform.dom" class="external-link">DOMResult</a>&nbsp;dom,
+ <a href="XmlConsumer.html" title="interface in jdk.jpackage.internal.util">XmlConsumer</a>&nbsp;xmlConsumer)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/javax/xml/parsers/DocumentBuilderFactory.html" title="class or interface in javax.xml.parsers" class="external-link">DocumentBuilderFactory</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#initDocumentBuilderFactory()" class="member-name-link">initDocumentBuilderFactory</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/javax/xml/transform/dom/DOMResult.html" title="class or interface in javax.xml.transform.dom" class="external-link">DOMResult</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createXml(jdk.jpackage.internal.util.XmlConsumer)" class="member-name-link">createXml</a><wbr>(<a href="XmlConsumer.html" title="interface in jdk.jpackage.internal.util">XmlConsumer</a>&nbsp;xmlConsumer)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#mergeXmls(javax.xml.stream.XMLStreamWriter,java.util.Collection)" class="member-name-link">mergeXmls</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/javax/xml/stream/XMLStreamWriter.html" title="class or interface in javax.xml.stream" class="external-link">XMLStreamWriter</a>&nbsp;xml,
- <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/javax/xml/transform/Source.html" title="class or interface in javax.xml.transform" class="external-link">Source</a>&gt;&nbsp;sources)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createXml(org.w3c.dom.Node,jdk.jpackage.internal.util.XmlConsumer)" class="member-name-link">createXml</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;root,
+ <a href="XmlConsumer.html" title="interface in jdk.jpackage.internal.util">XmlConsumer</a>&nbsp;xmlConsumer)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/javax/xml/parsers/DocumentBuilder.html" title="class or interface in javax.xml.parsers" class="external-link">DocumentBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#initDocumentBuilder()" class="member-name-link">initDocumentBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/javax/xml/parsers/DocumentBuilderFactory.html" title="class or interface in javax.xml.parsers" class="external-link">DocumentBuilderFactory</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#initDocumentBuilderFactory()" class="member-name-link">initDocumentBuilderFactory</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#queryNodes(org.w3c.dom.Node,javax.xml.xpath.XPath,java.lang.String)" class="member-name-link">queryNodes</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;xml,
@@ -223,11 +242,68 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="mergeXmls(javax.xml.stream.XMLStreamWriter,java.util.Collection)">
-<h3>mergeXmls</h3>
+<section class="detail" id="createXml(org.w3c.dom.Node,jdk.jpackage.internal.util.XmlConsumer)">
+<h3>createXml</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">mergeXmls</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/javax/xml/stream/XMLStreamWriter.html" title="class or interface in javax.xml.stream" class="external-link">XMLStreamWriter</a>&nbsp;xml,
- <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/javax/xml/transform/Source.html" title="class or interface in javax.xml.transform" class="external-link">Source</a>&gt;&nbsp;sources)</span>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">createXml</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;root,
+ <a href="XmlConsumer.html" title="interface in jdk.jpackage.internal.util">XmlConsumer</a>&nbsp;xmlConsumer)</span>
+                      throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<dl class="notes">
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="createXml(jdk.jpackage.internal.util.XmlConsumer)">
+<h3>createXml</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/javax/xml/transform/dom/DOMResult.html" title="class or interface in javax.xml.transform.dom" class="external-link">DOMResult</a></span>&nbsp;<span class="element-name">createXml</span><wbr><span class="parameters">(<a href="XmlConsumer.html" title="interface in jdk.jpackage.internal.util">XmlConsumer</a>&nbsp;xmlConsumer)</span>
+                           throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<dl class="notes">
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="createXml(javax.xml.transform.dom.DOMResult,jdk.jpackage.internal.util.XmlConsumer)">
+<h3>createXml</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">createXml</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/javax/xml/transform/dom/DOMResult.html" title="class or interface in javax.xml.transform.dom" class="external-link">DOMResult</a>&nbsp;dom,
+ <a href="XmlConsumer.html" title="interface in jdk.jpackage.internal.util">XmlConsumer</a>&nbsp;xmlConsumer)</span>
+                      throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<dl class="notes">
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="concatXml(javax.xml.stream.XMLStreamWriter,javax.xml.transform.Source...)">
+<h3>concatXml</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">concatXml</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/javax/xml/stream/XMLStreamWriter.html" title="class or interface in javax.xml.stream" class="external-link">XMLStreamWriter</a>&nbsp;xml,
+ <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/javax/xml/transform/Source.html" title="class or interface in javax.xml.transform" class="external-link">Source</a>...&nbsp;sources)</span>
+                      throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/javax/xml/stream/XMLStreamException.html" title="class or interface in javax.xml.stream" class="external-link">XMLStreamException</a>,
+<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<dl class="notes">
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/javax/xml/stream/XMLStreamException.html" title="class or interface in javax.xml.stream" class="external-link">XMLStreamException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="concatXml(javax.xml.stream.XMLStreamWriter,java.lang.Iterable)">
+<h3>concatXml</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">concatXml</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/javax/xml/stream/XMLStreamWriter.html" title="class or interface in javax.xml.stream" class="external-link">XMLStreamWriter</a>&nbsp;xml,
+ <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/javax/xml/transform/Source.html" title="class or interface in javax.xml.transform" class="external-link">Source</a>&gt;&nbsp;sources)</span>
                       throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.xml/javax/xml/stream/XMLStreamException.html" title="class or interface in javax.xml.stream" class="external-link">XMLStreamException</a>,
 <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
 <dl class="notes">

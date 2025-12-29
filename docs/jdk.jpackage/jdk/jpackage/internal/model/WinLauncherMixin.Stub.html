@@ -67,7 +67,7 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#constructor-detail" tabindex="0">Constructor Details</a>
 <ol class="toc-list">
-<li><a href="#%3Cinit%3E(boolean,java.util.Set)" tabindex="0">Stub(boolean, Set)</a></li>
+<li><a href="#%3Cinit%3E(boolean,java.util.Optional,java.util.Optional)" tabindex="0">Stub(boolean, Optional, Optional)</a></li>
 </ol>
 </li>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
@@ -76,7 +76,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#hashCode()" tabindex="0">hashCode()</a></li>
 <li><a href="#equals(java.lang.Object)" tabindex="0">equals(Object)</a></li>
 <li><a href="#isConsole()" tabindex="0">isConsole()</a></li>
-<li><a href="#shortcuts()" tabindex="0">shortcuts()</a></li>
+<li><a href="#startMenuShortcut()" tabindex="0">startMenuShortcut()</a></li>
+<li><a href="#desktopShortcut()" tabindex="0">desktopShortcut()</a></li>
 </ol>
 </li>
 </ol>
@@ -102,7 +103,7 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="WinLauncherMixin.html" title="interface in jdk.jpackage.internal.model">WinLauncherMixin</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">WinLauncherMixin.Stub</span>(boolean&nbsp;isConsole, <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="WinLauncherMixin.WinShortcut.html" title="enum class in jdk.jpackage.internal.model">WinLauncherMixin.WinShortcut</a>&gt;&nbsp;shortcuts)
+<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">WinLauncherMixin.Stub</span>(boolean&nbsp;isConsole, <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="LauncherShortcut.html" title="class in jdk.jpackage.internal.model">LauncherShortcut</a>&gt;&nbsp;startMenuShortcut, <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="LauncherShortcut.html" title="class in jdk.jpackage.internal.model">LauncherShortcut</a>&gt;&nbsp;desktopShortcut)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a>
 implements <a href="WinLauncherMixin.html" title="interface in jdk.jpackage.internal.model">WinLauncherMixin</a></span></div>
 </div>
@@ -115,7 +116,7 @@ implements <a href="WinLauncherMixin.html" title="interface in jdk.jpackage.inte
 <h2>Nested Class Summary</h2>
 <div class="inherited-list">
 <h3 id="nested-classes-inherited-from-class-jdk.jpackage.internal.model.WinLauncherMixin">Nested classes/interfaces inherited from interface&nbsp;jdk.jpackage.internal.model.<a href="WinLauncherMixin.html" title="interface in jdk.jpackage.internal.model">WinLauncherMixin</a></h3>
-<code><a href="WinLauncherMixin.Stub.html" title="class in jdk.jpackage.internal.model">WinLauncherMixin.Stub</a>, <a href="WinLauncherMixin.WinShortcut.html" title="enum class in jdk.jpackage.internal.model">WinLauncherMixin.WinShortcut</a></code></div>
+<code><a href="WinLauncherMixin.Stub.html" title="class in jdk.jpackage.internal.model">WinLauncherMixin.Stub</a></code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -126,8 +127,9 @@ implements <a href="WinLauncherMixin.html" title="interface in jdk.jpackage.inte
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(boolean,java.util.Set)" class="member-name-link">Stub</a><wbr>(boolean&nbsp;isConsole,
- <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="WinLauncherMixin.WinShortcut.html" title="enum class in jdk.jpackage.internal.model">WinLauncherMixin.WinShortcut</a>&gt;&nbsp;shortcuts)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(boolean,java.util.Optional,java.util.Optional)" class="member-name-link">Stub</a><wbr>(boolean&nbsp;isConsole,
+ <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="LauncherShortcut.html" title="class in jdk.jpackage.internal.model">LauncherShortcut</a>&gt;&nbsp;startMenuShortcut,
+ <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="LauncherShortcut.html" title="class in jdk.jpackage.internal.model">LauncherShortcut</a>&gt;&nbsp;desktopShortcut)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>Stub</code> record class.</div>
 </div>
@@ -145,29 +147,34 @@ implements <a href="WinLauncherMixin.html" title="interface in jdk.jpackage.inte
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;<a href="LauncherShortcut.html" title="class in jdk.jpackage.internal.model">LauncherShortcut</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#desktopShortcut()" class="member-name-link">desktopShortcut</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>desktopShortcut</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates whether some other object is "equal to" this one.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a hash code value for this object.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isConsole()" class="member-name-link">isConsole</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isConsole()" class="member-name-link">isConsole</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>isConsole</code> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="WinLauncherMixin.WinShortcut.html" title="enum class in jdk.jpackage.internal.model">WinLauncherMixin.WinShortcut</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shortcuts()" class="member-name-link">shortcuts</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>shortcuts</code> record component.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;<a href="LauncherShortcut.html" title="class in jdk.jpackage.internal.model">LauncherShortcut</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#startMenuShortcut()" class="member-name-link">startMenuShortcut</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>startMenuShortcut</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
 </div>
@@ -188,16 +195,18 @@ implements <a href="WinLauncherMixin.html" title="interface in jdk.jpackage.inte
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(boolean,java.util.Set)">
+<section class="detail" id="&lt;init&gt;(boolean,java.util.Optional,java.util.Optional)">
 <h3>Stub</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Stub</span><wbr><span class="parameters">(boolean&nbsp;isConsole,
- <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="WinLauncherMixin.WinShortcut.html" title="enum class in jdk.jpackage.internal.model">WinLauncherMixin.WinShortcut</a>&gt;&nbsp;shortcuts)</span></div>
+ <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="LauncherShortcut.html" title="class in jdk.jpackage.internal.model">LauncherShortcut</a>&gt;&nbsp;startMenuShortcut,
+ <a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="LauncherShortcut.html" title="class in jdk.jpackage.internal.model">LauncherShortcut</a>&gt;&nbsp;desktopShortcut)</span></div>
 <div class="block">Creates an instance of a <code>Stub</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>isConsole</code> - the value for the <code>isConsole</code> record component</dd>
-<dd><code>shortcuts</code> - the value for the <code>shortcuts</code> record component</dd>
+<dd><code>startMenuShortcut</code> - the value for the <code>startMenuShortcut</code> record component</dd>
+<dd><code>desktopShortcut</code> - the value for the <code>desktopShortcut</code> record component</dd>
 </dl>
 </div>
 </section>
@@ -273,16 +282,31 @@ implements <a href="WinLauncherMixin.html" title="interface in jdk.jpackage.inte
 </section>
 </li>
 <li>
-<section class="detail" id="shortcuts()">
-<h3>shortcuts</h3>
+<section class="detail" id="startMenuShortcut()">
+<h3>startMenuShortcut</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="WinLauncherMixin.WinShortcut.html" title="enum class in jdk.jpackage.internal.model">WinLauncherMixin.WinShortcut</a>&gt;</span>&nbsp;<span class="element-name">shortcuts</span>()</div>
-<div class="block">Returns the value of the <code>shortcuts</code> record component.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="LauncherShortcut.html" title="class in jdk.jpackage.internal.model">LauncherShortcut</a>&gt;</span>&nbsp;<span class="element-name">startMenuShortcut</span>()</div>
+<div class="block">Returns the value of the <code>startMenuShortcut</code> record component.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="WinLauncherMixin.html#shortcuts()">shortcuts</a></code>&nbsp;in interface&nbsp;<code><a href="WinLauncherMixin.html" title="interface in jdk.jpackage.internal.model">WinLauncherMixin</a></code></dd>
+<dd><code><a href="WinLauncherMixin.html#startMenuShortcut()">startMenuShortcut</a></code>&nbsp;in interface&nbsp;<code><a href="WinLauncherMixin.html" title="interface in jdk.jpackage.internal.model">WinLauncherMixin</a></code></dd>
 <dt>Returns:</dt>
-<dd>the value of the <code>shortcuts</code> record component</dd>
+<dd>the value of the <code>startMenuShortcut</code> record component</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="desktopShortcut()">
+<h3>desktopShortcut</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="LauncherShortcut.html" title="class in jdk.jpackage.internal.model">LauncherShortcut</a>&gt;</span>&nbsp;<span class="element-name">desktopShortcut</span>()</div>
+<div class="block">Returns the value of the <code>desktopShortcut</code> record component.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="WinLauncherMixin.html#desktopShortcut()">desktopShortcut</a></code>&nbsp;in interface&nbsp;<code><a href="WinLauncherMixin.html" title="interface in jdk.jpackage.internal.model">WinLauncherMixin</a></code></dd>
+<dt>Returns:</dt>
+<dd>the value of the <code>desktopShortcut</code> record component</dd>
 </dl>
 </div>
 </section>
