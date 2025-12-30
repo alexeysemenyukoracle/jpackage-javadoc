@@ -99,8 +99,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#dumpStdout()" tabindex="0">dumpStdout()</a></li>
 <li><a href="#dumpStderr(java.io.PrintStream)" tabindex="0">dumpStderr(PrintStream)</a></li>
 <li><a href="#dumpStderr()" tabindex="0">dumpStderr()</a></li>
-<li><a href="#processNotifier(java.util.function.Consumer)" tabindex="0">processNotifier(Consumer)</a></li>
-<li><a href="#processNotifier()" tabindex="0">processNotifier()</a></li>
+<li><a href="#processListener(java.util.function.Consumer)" tabindex="0">processListener(Consumer)</a></li>
+<li><a href="#processListener()" tabindex="0">processListener()</a></li>
 <li><a href="#copy()" tabindex="0">copy()</a></li>
 <li><a href="#createExecutable(java.util.spi.ToolProvider,java.lang.String...)" tabindex="0">createExecutable(ToolProvider, String...)</a></li>
 <li><a href="#createExecutable(java.lang.ProcessBuilder)" tabindex="0">createExecutable(ProcessBuilder)</a></li>
@@ -666,14 +666,14 @@ loadScripts(document, 'script');</script>
  method on this object, or <code>false</code> if the method has not been called.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Process.html" title="class or interface in java.lang" class="external-link">Process</a>&gt;&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#processNotifier()" class="member-name-link">processNotifier</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#processListener()" class="member-name-link">processListener</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns an <code>Optional</code> wrapping the value passed in the last call of
- <a href="#processNotifier(java.util.function.Consumer)"><code>processNotifier(Consumer)</code></a> method on this object, or an empty
- <code>Optional</code> if the method has not been called.</div>
+ <a href="#processListener(java.util.function.Consumer)"><code>processListener(Consumer)</code></a> method on this object, or an empty
+ <code>Optional</code> if the method has not been called or <code>null</code> was passed in the last call.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CommandOutputControl.html" title="class in jdk.jpackage.internal.util">CommandOutputControl</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#processNotifier(java.util.function.Consumer)" class="member-name-link">processNotifier</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Process.html" title="class or interface in java.lang" class="external-link">Process</a>&gt;&nbsp;v)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#processListener(java.util.function.Consumer)" class="member-name-link">processListener</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Process.html" title="class or interface in java.lang" class="external-link">Process</a>&gt;&nbsp;v)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sets the callback to be invoked when this object starts a subprocess from
  subsequent <code>execute(ProcessBuilder, long)</code> calls.</div>
@@ -1179,10 +1179,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="processNotifier(java.util.function.Consumer)">
-<h3>processNotifier</h3>
+<section class="detail" id="processListener(java.util.function.Consumer)">
+<h3>processListener</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CommandOutputControl.html" title="class in jdk.jpackage.internal.util">CommandOutputControl</a></span>&nbsp;<span class="element-name">processNotifier</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Process.html" title="class or interface in java.lang" class="external-link">Process</a>&gt;&nbsp;v)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CommandOutputControl.html" title="class in jdk.jpackage.internal.util">CommandOutputControl</a></span>&nbsp;<span class="element-name">processListener</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Process.html" title="class or interface in java.lang" class="external-link">Process</a>&gt;&nbsp;v)</span></div>
 <div class="block">Sets the callback to be invoked when this object starts a subprocess from
  subsequent <code>execute(ProcessBuilder, long)</code> calls.
 
@@ -1197,7 +1197,7 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>v</code> - the callback for notifying a subprocess being started or
-          <code>null</code> to</dd>
+          <code>null</code></dd>
 <dt>Returns:</dt>
 <dd>this</dd>
 </dl>
@@ -1205,17 +1205,17 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="processNotifier()">
-<h3>processNotifier</h3>
+<section class="detail" id="processListener()">
+<h3>processListener</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Process.html" title="class or interface in java.lang" class="external-link">Process</a>&gt;&gt;</span>&nbsp;<span class="element-name">processNotifier</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Process.html" title="class or interface in java.lang" class="external-link">Process</a>&gt;&gt;</span>&nbsp;<span class="element-name">processListener</span>()</div>
 <div class="block">Returns an <code>Optional</code> wrapping the value passed in the last call of
- <a href="#processNotifier(java.util.function.Consumer)"><code>processNotifier(Consumer)</code></a> method on this object, or an empty
- <code>Optional</code> if the method has not been called.</div>
+ <a href="#processListener(java.util.function.Consumer)"><code>processListener(Consumer)</code></a> method on this object, or an empty
+ <code>Optional</code> if the method has not been called or <code>null</code> was passed in the last call.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>an <code>Optional</code> wrapping the value passed in the last call of
-         <a href="#processNotifier(java.util.function.Consumer)"><code>processNotifier(Consumer)</code></a></dd>
+         <a href="#processListener(java.util.function.Consumer)"><code>processListener(Consumer)</code></a></dd>
 </dl>
 </div>
 </section>
